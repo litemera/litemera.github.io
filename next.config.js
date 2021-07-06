@@ -6,9 +6,6 @@ const withPlugins = require("next-compose-plugins");
 const withImages = require("next-images");
 const TerserPlugin = require("terser-webpack-plugin");
 
-const isProd = process.env.NODE_ENV === "production";
-const NAME = "litemera";
-
 const nextConfig = {
   reactStrictMode: true,
 

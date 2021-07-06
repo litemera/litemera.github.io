@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vollainc.github.io/litemera/sitemap.xml
+Sitemap: https://litemera.github.io/sitemap.xml
