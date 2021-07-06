@@ -37,6 +37,7 @@ const Index: NextPage = () => {
       "name": "${TITLE}",
       "url": "${DOMAIN}",
       "sameAs": [
+        "https://www.facebook.com/Litemera-106945318323623",
         "https://github.com/litemera"
       ]
     }`;

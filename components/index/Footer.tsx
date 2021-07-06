@@ -29,9 +29,11 @@ const Footer: NextPage = () => {
   const footerItems = [
     {
       title: "개인정보처리방침",
+      href: "https://www.notion.so/volla/8aa9a7f58a0645f093ff96caa0877ac9",
     },
     {
       title: "서비스이용약관",
+      href: "https://www.notion.so/volla/8aa9a7f58a0645f093ff96caa0877ac9",
     },
   ];
 
@@ -40,7 +42,15 @@ const Footer: NextPage = () => {
       <style jsx>{style}</style>
       <div className="footer">
         {footerItems.map((item, i: number) => (
-          <span key={i}>{item.title}</span>
+          <a
+            key={i}
+            title={item.title}
+            href={item.href}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>{item.title}</span>
+          </a>
         ))}
       </div>
     </>
