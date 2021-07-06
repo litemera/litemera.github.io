@@ -54,9 +54,14 @@ const Index: NextPage = () => {
       </MetaHead>
       <div className="index">
         <div>
-          <img alt={TITLE} src="/images/launcher.svg" />
+          <img
+            width="96px"
+            height="96px"
+            alt={TITLE}
+            src="/images/launcher.svg"
+          />
           <h1>{TITLE}</h1>
-          <h3>{DESCRIPTION}</h3>
+          <h2>{DESCRIPTION}</h2>
           <DownloadBtn />
         </div>
         <Footer />
