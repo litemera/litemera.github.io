@@ -3,25 +3,30 @@ import React from "react";
 import { NextPage } from "next";
 import { css } from "styled-jsx/css";
 
-import DownloadBtn from "@components/DownloadBtn";
-import MetaHead from "@components/MetaHead";
+import Footer from "@components/index/Footer";
+import DownloadBtn from "@components/misc/DownloadBtn";
+import MetaHead from "@components/misc/MetaHead";
 import { DOMAIN, TITLE, DESCRIPTION } from "@utils/constants";
 
 const style = css`
-  .body {
+  .index {
     margin: 96px auto 0;
     text-align: center;
   }
 
-  .body > div {
+  .index > div {
     display: inline-block;
-  }
-
-  img {
   }
 
   h1 {
     margin-bottom: -16px;
+  }
+
+  @media screen and (max-width: 320px) {
+    .index {
+      margin: 64px auto 0;
+      text-align: center;
+    }
   }
 `;
 
@@ -47,13 +52,14 @@ const Index: NextPage = () => {
           }}
         />
       </MetaHead>
-      <div className="body">
+      <div className="index">
         <div>
           <img alt={TITLE} src="/images/launcher.svg" />
           <h1>{TITLE}</h1>
           <h3>{DESCRIPTION}</h3>
           <DownloadBtn />
         </div>
+        <Footer />
       </div>
     </>
   );

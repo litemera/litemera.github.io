@@ -44,6 +44,10 @@ const style = css`
   }
 
   @media screen and (max-width: 320px) {
+    .dlBtn {
+      margin-top: 64px;
+    }
+
     .ios {
       margin-right: 4px;
     }
@@ -60,7 +64,7 @@ const DownloadBtn: React.FC = () => {
       <style jsx>{style}</style>
       <div className="dlBtn">
         <div className="dlBtn_wrapper">
-          <div className="btn ios">
+          <div className="btn ios" role="button">
             <a
               href={IOS_URL}
               target="_blank"
@@ -77,7 +81,7 @@ const DownloadBtn: React.FC = () => {
               <span>App Store</span>
             </a>
           </div>
-          <div className="btn android">
+          <div className="btn android" role="button">
             <a
               href={AND_URL}
               target="_blank"
