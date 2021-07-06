@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+@import "./normalize.scss";
+
+html {
+  color: #fff;
+  background-color: #121212;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
