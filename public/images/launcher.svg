@@ -22,7 +22,7 @@
                 <g fill-rule="nonzero"></g>
                 <rect id="base" fill="#FFFFFF" mask="url(#mask-3)" x="0" y="0" width="36" height="36"></rect>
             </g>
-            <circle id="Oval" fill="#784CEE" cx="82.5" cy="13.5" r="4.5"></circle>
+            <circle id="Oval" fill="#784CEE" cx="81" cy="15" r="4.5"></circle>
         </g>
     </g>
 </svg>

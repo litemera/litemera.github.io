@@ -2,22 +2,45 @@
 
 @import "./normalize.scss";
 
+@import "./modules/functions.scss";
+@import "./modules/mqbp.scss";
+@import "./modules/variables.scss";
+
 html {
   color: #fff;
-  background-color: #121212;
+  background-color: $background;
 }
 
-html,
 body {
   padding: 0;
   margin: 0;
+  line-height: 1.5;
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-}
 
-a {
-  text-decoration: none;
-}
+  ::-moz-selection {
+    color: #000;
+    background: #fff;
+  }
 
-* {
-  box-sizing: border-box;
+  ::selection {
+    color: #000;
+    background: #fff;
+  }
+
+  button {
+    border: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  h1 {
+    font-size: units(8);
+  }
+
+  h3 {
+    font-size: units(6);
+    font-weight: 400;
+  }
 }

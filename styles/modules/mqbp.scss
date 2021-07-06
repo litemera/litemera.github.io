@@ -1,0 +1,11 @@
+$desktop_size: 1200px;
+$tablet_size: 768px;
+$pablet_size: 420px;
+$mobile_size: 375px;
+$small_size: 320px;
+
+$desktop: "screen and (max-width: #{$desktop_size})";
+$tablet: "screen and (max-width: #{$tablet_size})";
+$pablet: "screen and (max-width: #{$pablet_size})";
+$mobile: "screen and (max-width: #{$mobile_size})";
+$small: "screen and (max-width: #{$small_size})";
