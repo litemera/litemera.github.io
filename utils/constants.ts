@@ -1,4 +1,4 @@
-export const DOMAIN = "https://vollainc.github.io/litemera/";
+export const DOMAIN = "https://litemera.github.io/";
 
 export const TITLE = "Litemera";
 export const DESCRIPTION = "지워지는 카메라";
