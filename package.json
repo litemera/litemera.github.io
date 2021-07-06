@@ -2,7 +2,7 @@
   "name": "litemera",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/litemera/litemera",
+  "homepage": "https://litemera.github.io/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
