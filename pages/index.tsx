@@ -17,17 +17,11 @@ const Index = () => {
       <Head>
         <title>{TITLE}</title>
         <meta name="description" content={TITLE} />
-        <link
-          rel="icon"
-          href={`${process.env.BACKEND_URL}/favicon/favicon.ico`}
-        />
+        <link rel="icon" href="/favicon/favicon.ico" />
       </Head>
       <div>
         <div>
-          <img
-            alt={TITLE}
-            src={`${process.env.BACKEND_URL}/images/launcher.svg`}
-          />
+          <img alt={TITLE} src="/images/launcher.svg" />
           <h1>{TITLE}</h1>
         </div>
       </div>

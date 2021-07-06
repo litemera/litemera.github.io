@@ -10,9 +10,6 @@ const isProd = process.env.NODE_ENV === "production";
 const NAME = "litemera";
 
 const nextConfig = {
-  basePath: isProd ? `/${NAME}` : "",
-  assetPrefix: isProd ? `/${NAME}/` : "",
-
   reactStrictMode: true,
 
   webpack: (config, options) => {
