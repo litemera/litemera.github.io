@@ -1,11 +1,11 @@
 import React from "react";
 
 import { NextPage } from "next";
+import dynamic from "next/dynamic";
 import { css } from "styled-jsx/css";
 
 import Footer from "@components/index/Footer";
 import DownloadBtn from "@components/misc/DownloadBtn";
-import KakaoBtn from "@components/misc/KakaoBtn";
 import MetaHead from "@components/misc/MetaHead";
 import {
   DOMAIN,
@@ -16,6 +16,9 @@ import {
   INSTAGRAM_USERNAME,
   TWITTER_USERNAME,
 } from "@utils/constants";
+import { useMediaQuery } from "@utils/hooks/useMediaQuery";
+
+const KakaoBtn = dynamic(() => import("@components/misc/KakaoBtn"));
 
 const style = css`
   .index {
@@ -28,18 +31,31 @@ const style = css`
   }
 
   h1 {
-    margin-bottom: -16px;
+    margin-bottom: -8px;
+  }
+
+  span {
+    opacity: 0.54;
+    margin-top: -16px;
+    display: block;
+  }
+
+  @media screen and (max-width: 420px) {
+    .index {
+      margin: 64px auto 0;
+    }
   }
 
   @media screen and (max-width: 320px) {
     .index {
-      margin: 64px auto 0;
-      text-align: center;
+      margin: 48px auto 0;
     }
   }
 `;
 
 const Index: NextPage = () => {
+  const isMobile: boolean = useMediaQuery(`(max-width: 420px)`);
+
   const jsonLdData = `{
       "@context": "https://schema.org/",
       "@type": "Organization",
@@ -76,10 +92,11 @@ const Index: NextPage = () => {
           <h2>
             {DESCRIPTION}, {TITLE_KO}
           </h2>
+          <span>찍고 24시간 지나면 자동삭제</span>
           <DownloadBtn />
         </div>
         <Footer />
-        <KakaoBtn />
+        {isMobile ? null : <KakaoBtn />}
       </div>
     </>
   );

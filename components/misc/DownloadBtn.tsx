@@ -37,6 +37,12 @@ const style = css`
     display: inline-block;
   }
 
+  @media screen and (max-width: 420px) {
+    .dlBtn {
+      margin-top: 64px;
+    }
+  }
+
   @media screen and (max-width: 360px) {
     .btn img {
       padding-right: 8px;
@@ -45,7 +51,7 @@ const style = css`
 
   @media screen and (max-width: 320px) {
     .dlBtn {
-      margin-top: 64px;
+      margin-top: 48px;
     }
 
     .ios {
