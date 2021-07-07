@@ -2,7 +2,7 @@
   "name": "litemera",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://litemera.github.io/",
+  "description": "Litemera: 찍으면 24시간 뒤에 자동으로 지워지는 카메라, 라이트메라",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -28,5 +28,18 @@
     "eslint-plugin-prettier": "^3.4.0",
     "terser-webpack-plugin": "^5.1.4",
     "typescript": "^4.3.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/litemera/litemera.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/litemera/litemera.github.io/issues"
+  },
+  "keywords": [
+    "Litemera",
+    "라이트메라"
+  ],
+  "author": "litemera",
+  "homepage": "https://litemera.github.io/"
 }

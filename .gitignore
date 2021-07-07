@@ -11,6 +11,9 @@
 # next.js
 /.next/
 
+# vscode
+.vscode
+
 # production
 /build
 
