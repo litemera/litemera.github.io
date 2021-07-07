@@ -10,3 +10,7 @@ export const IOS_URL = `https://apps.apple.com/kr/app/id${IOS_ID}`;
 
 export const ANDROID_PACKAGE = `com.dreammeister.litemera`;
 export const AND_URL = `https://play.google.com/store/apps/details?id=${ANDROID_PACKAGE}`;
+
+export const FACEBOOK_PAGE_ID = `106945318323623`;
+export const FACEBOOK_USERNAME = `Litemera-106945318323623`;
+export const TWITTER_USERNAME = `litemera_app`;

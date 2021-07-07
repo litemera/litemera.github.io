@@ -2,7 +2,7 @@ import React from "react";
 
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
-import { TITLE } from "@utils/constants";
+import { TITLE, FACEBOOK_PAGE_ID, TWITTER_USERNAME } from "@utils/constants";
 
 class Litemera extends Document {
   static async getInitialProps(ctx: any) {
@@ -27,12 +27,18 @@ class Litemera extends Document {
             name="google-site-verification"
             content="vceGUL0YSQHRaQfOUAckEH-473T4Oz9w9d0uGvOkBLs"
           />
+          <meta property="fb:page_id" content={FACEBOOK_PAGE_ID} />
 
           <meta name="robots" content="index,follow" />
           <meta name="googlebot" content="index,follow" />
 
           <meta name="author" content={TITLE} />
           <meta property="og:locale" content="ko_KR" />
+
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content={`@${TWITTER_USERNAME}`} />
+          <meta name="twitter:creator" content={`@${TWITTER_USERNAME}`} />
+          <meta name="twitter:card" content="summary_large_image" />
 
           <link
             rel="apple-touch-icon"

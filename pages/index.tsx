@@ -6,7 +6,13 @@ import { css } from "styled-jsx/css";
 import Footer from "@components/index/Footer";
 import DownloadBtn from "@components/misc/DownloadBtn";
 import MetaHead from "@components/misc/MetaHead";
-import { DOMAIN, TITLE, DESCRIPTION } from "@utils/constants";
+import {
+  DOMAIN,
+  TITLE,
+  DESCRIPTION,
+  FACEBOOK_USERNAME,
+  TWITTER_USERNAME,
+} from "@utils/constants";
 
 const style = css`
   .index {
@@ -37,7 +43,8 @@ const Index: NextPage = () => {
       "name": "${TITLE}",
       "url": "${DOMAIN}",
       "sameAs": [
-        "https://www.facebook.com/Litemera-106945318323623",
+        "https://www.facebook.com/${FACEBOOK_USERNAME}",
+        "https://twitter.com/${TWITTER_USERNAME}",
         "https://github.com/litemera"
       ]
     }`;
