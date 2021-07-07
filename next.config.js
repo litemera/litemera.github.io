@@ -6,10 +6,16 @@ const withPlugins = require("next-compose-plugins");
 const withImages = require("next-images");
 const TerserPlugin = require("terser-webpack-plugin");
 
+/**
+ * @type {import('next/dist/next-server/server/config').NextConfig}
+ **/
 const nextConfig = {
   reactStrictMode: true,
 
-  webpack: (config, options) => {
+  webpack: (
+    /** @type {{ plugins: any[]; optimization: { minimize: boolean; minimizer: any[]; }; }} */ config,
+    /** @type {{ buildId: any; dev: any; isServer: any; defaultLoaders: any; webpack: any; }} */ options
+  ) => {
     let { buildId, dev, isServer, defaultLoaders, webpack } = options;
     config.plugins.push(new webpack.IgnorePlugin(/\/__tests__\//));
 
