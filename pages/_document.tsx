@@ -2,7 +2,12 @@ import React from "react";
 
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
-import { TITLE, FACEBOOK_PAGE_ID, TWITTER_USERNAME } from "@utils/constants";
+import {
+  TITLE,
+  FACEBOOK_PAGE_ID,
+  FACEBOOK_DOMAIN_ID,
+  TWITTER_USERNAME,
+} from "@utils/constants";
 
 class Litemera extends Document {
   static async getInitialProps(ctx: any) {
@@ -28,6 +33,10 @@ class Litemera extends Document {
             content="vceGUL0YSQHRaQfOUAckEH-473T4Oz9w9d0uGvOkBLs"
           />
           <meta property="fb:page_id" content={FACEBOOK_PAGE_ID} />
+          <meta
+            name="facebook-domain-verification"
+            content={FACEBOOK_DOMAIN_ID}
+          />
 
           <meta name="robots" content="index,follow" />
           <meta name="googlebot" content="index,follow" />

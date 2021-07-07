@@ -13,4 +13,5 @@ export const AND_URL = `https://play.google.com/store/apps/details?id=${ANDROID_
 
 export const FACEBOOK_PAGE_ID = `106945318323623`;
 export const FACEBOOK_USERNAME = `Litemera-106945318323623`;
+export const FACEBOOK_DOMAIN_ID = `9doi5696lwdk0l11lrvmcgmymhzcd3`;
 export const TWITTER_USERNAME = `litemera_app`;
