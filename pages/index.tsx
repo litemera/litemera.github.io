@@ -11,6 +11,7 @@ import {
   TITLE,
   DESCRIPTION,
   FACEBOOK_USERNAME,
+  INSTAGRAM_USERNAME,
   TWITTER_USERNAME,
 } from "@utils/constants";
 
@@ -44,6 +45,7 @@ const Index: NextPage = () => {
       "url": "${DOMAIN}",
       "sameAs": [
         "https://www.facebook.com/${FACEBOOK_USERNAME}",
+        "https://www.instagram.com/${INSTAGRAM_USERNAME}",
         "https://twitter.com/${TWITTER_USERNAME}",
         "https://github.com/litemera"
       ]

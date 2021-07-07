@@ -3,7 +3,7 @@ export const DOMAIN = "https://litemera.github.io/";
 export const TITLE = "Litemera";
 export const DESCRIPTION = "지워지는 카메라";
 export const APP_FULL_NAME = `${TITLE} - ${DESCRIPTION}`;
-export const KEYWORDS = `${TITLE}, 카메라, 사진, 앱, 어플, 어플리케이션, 앱스토어, 구글플레이, 애플, 안드로이드, 플레이스토어`;
+export const KEYWORDS = `${TITLE}, 카메라, 사진, 앱, 어플, 어플리케이션, 앱스토어, 구글플레이, 애플, 안드로이드, 플레이스토어, 와이파이, 카페, 주차장, 화장실, 비밀번호, 공유`;
 
 export const IOS_ID = `1575339252`;
 export const IOS_URL = `https://apps.apple.com/kr/app/id${IOS_ID}`;
@@ -15,4 +15,5 @@ export const FACEBOOK_APP_ID = `842831443297227`;
 export const FACEBOOK_PAGE_ID = `106945318323623`;
 export const FACEBOOK_USERNAME = `Litemera-106945318323623`;
 export const FACEBOOK_DOMAIN_ID = `9doi5696lwdk0l11lrvmcgmymhzcd3`;
+export const INSTAGRAM_USERNAME = `litemera.app`;
 export const TWITTER_USERNAME = `litemera_app`;
