@@ -2,7 +2,7 @@ import React from "react";
 
 import css from "styled-jsx/css";
 
-import { TITLE, IOS_URL, AND_URL } from "@utils/constants";
+import { TITLE_EN, IOS_URL, AND_URL } from "@utils/constants";
 
 const style = css`
   .dlBtn {
@@ -68,15 +68,15 @@ const DownloadBtn: React.FC = () => {
             <a
               href={IOS_URL}
               target="_blank"
-              title={`앱스토어에서 ${TITLE} 다운받기`}
+              title={`앱스토어에서 ${TITLE_EN} 다운받기`}
               rel="noopener noreferrer"
             >
               <img
                 width="24px"
                 height="24px"
                 src={"/images/store-ios.png"}
-                alt={`App Store - ${TITLE}`}
-                title={`App Store - ${TITLE}`}
+                alt={`App Store - ${TITLE_EN}`}
+                title={`App Store - ${TITLE_EN}`}
               />
               <span>App Store</span>
             </a>
@@ -85,15 +85,15 @@ const DownloadBtn: React.FC = () => {
             <a
               href={AND_URL}
               target="_blank"
-              title={`구글 플레이에서 ${TITLE} 다운받기`}
+              title={`구글 플레이에서 ${TITLE_EN} 다운받기`}
               rel="noopener noreferrer"
             >
               <img
                 width="24px"
                 height="24px"
                 src={"/images/store-android.png"}
-                alt={`Google Play - ${TITLE}`}
-                title={`Google Play - ${TITLE}`}
+                alt={`Google Play - ${TITLE_EN}`}
+                title={`Google Play - ${TITLE_EN}`}
               />
               <span>Google Play</span>
             </a>

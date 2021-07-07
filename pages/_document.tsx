@@ -3,7 +3,7 @@ import React from "react";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 import {
-  TITLE,
+  TITLE_EN,
   FACEBOOK_APP_ID,
   FACEBOOK_PAGE_ID,
   FACEBOOK_DOMAIN_ID,
@@ -43,7 +43,7 @@ class Litemera extends Document {
           <meta name="robots" content="index,follow" />
           <meta name="googlebot" content="index,follow" />
 
-          <meta name="author" content={TITLE} />
+          <meta name="author" content={TITLE_EN} />
           <meta property="og:locale" content="ko_KR" />
 
           <meta name="twitter:card" content="summary_large_image" />

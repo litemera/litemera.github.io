@@ -8,7 +8,8 @@ import DownloadBtn from "@components/misc/DownloadBtn";
 import MetaHead from "@components/misc/MetaHead";
 import {
   DOMAIN,
-  TITLE,
+  TITLE_EN,
+  TITLE_KO,
   DESCRIPTION,
   FACEBOOK_USERNAME,
   INSTAGRAM_USERNAME,
@@ -41,7 +42,7 @@ const Index: NextPage = () => {
   const jsonLdData = `{
       "@context": "https://schema.org/",
       "@type": "Organization",
-      "name": "${TITLE}",
+      "name": "${TITLE_EN}",
       "url": "${DOMAIN}",
       "sameAs": [
         "https://www.facebook.com/${FACEBOOK_USERNAME}",
@@ -67,11 +68,13 @@ const Index: NextPage = () => {
           <img
             width="96px"
             height="96px"
-            alt={TITLE}
+            alt={TITLE_EN}
             src="/images/launcher.svg"
           />
-          <h1>{TITLE}</h1>
-          <h2>{DESCRIPTION}</h2>
+          <h1>{TITLE_EN}</h1>
+          <h2>
+            {DESCRIPTION} - {TITLE_KO}
+          </h2>
           <DownloadBtn />
         </div>
         <Footer />
