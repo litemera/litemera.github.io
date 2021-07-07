@@ -4,6 +4,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 
 import {
   TITLE,
+  FACEBOOK_APP_ID,
   FACEBOOK_PAGE_ID,
   FACEBOOK_DOMAIN_ID,
   TWITTER_USERNAME,
@@ -32,6 +33,7 @@ class Litemera extends Document {
             name="google-site-verification"
             content="vceGUL0YSQHRaQfOUAckEH-473T4Oz9w9d0uGvOkBLs"
           />
+          <meta property="fb:app_id" content={FACEBOOK_APP_ID} />
           <meta property="fb:page_id" content={FACEBOOK_PAGE_ID} />
           <meta
             name="facebook-domain-verification"
