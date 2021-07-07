@@ -22,12 +22,6 @@ class Litemera extends Document {
     return (
       <Html lang="ko">
         <Head>
-          <link
-            rel="stylesheet"
-            type="text/css"
-            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css"
-          />
-
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta charSet="UTF-8" />
 
