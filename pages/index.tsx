@@ -92,7 +92,7 @@ const Index: NextPage = () => {
           <h2>
             {DESCRIPTION}, {TITLE_KO}
           </h2>
-          <span>찍고 24시간 지나면 자동삭제</span>
+          <span>찍고📸 24시간 지나면⏳ 자동삭제🗑️</span>
           <DownloadBtn />
         </div>
         <Footer />
