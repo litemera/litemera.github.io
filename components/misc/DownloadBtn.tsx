@@ -51,7 +51,7 @@ const style = css`
 
   @media screen and (max-width: 320px) {
     .dlBtn {
-      margin-top: 48px;
+      margin-top: 32px;
     }
 
     .ios {

@@ -34,12 +34,6 @@ const style = css`
     margin-bottom: -8px;
   }
 
-  span {
-    opacity: 0.54;
-    margin-top: -16px;
-    display: block;
-  }
-
   @media screen and (max-width: 420px) {
     .index {
       margin: 64px auto 0;
@@ -92,7 +86,6 @@ const Index: NextPage = () => {
           <h2>
             {DESCRIPTION}, {TITLE_KO}
           </h2>
-          <span>찍고📸 24시간 지나면⏳ 자동삭제🗑️</span>
           <DownloadBtn />
         </div>
         <Footer />

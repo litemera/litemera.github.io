@@ -20,7 +20,7 @@ const AppBridge: NextPage = () => {
     userAgent(AND_URL, IOS_URL);
     setTimeout(() => {
       Router.push("/");
-    }, 3000);
+    }, 1000);
   }, []);
 
   const title = `${TITLE_EN} 앱 다운받기`;
