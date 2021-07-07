@@ -5,8 +5,8 @@ import Head from "next/head";
 import {
   DOMAIN,
   TITLE_EN,
-  TITLE_KO,
-  DESCRIPTION,
+  APP_FULL_NAME,
+  DESCRIPTION_FULL,
   KEYWORDS,
 } from "@utils/constants";
 
@@ -21,12 +21,10 @@ const MetaHead: React.FC<MetaHeadProps> = ({
 }: MetaHeadProps) => {
   return (
     <Head>
-      <title>
-        {TITLE_EN} - {TITLE_KO}
-      </title>
+      <title>{APP_FULL_NAME}</title>
 
-      <meta name="title" content={`${TITLE_EN} - ${TITLE_KO}`} />
-      <meta name="description" content={DESCRIPTION} />
+      <meta name="title" content={`${APP_FULL_NAME}`} />
+      <meta name="description" content={DESCRIPTION_FULL} />
       <meta name="keywords" content={KEYWORDS} />
 
       <meta
@@ -35,18 +33,18 @@ const MetaHead: React.FC<MetaHeadProps> = ({
       />
 
       <meta property="og:title" content={TITLE_EN} />
-      <meta property="og:site_name" content={TITLE_EN} />
-      <meta property="og:description" content={DESCRIPTION} />
+      <meta property="og:site_name" content={APP_FULL_NAME} />
+      <meta property="og:description" content={DESCRIPTION_FULL} />
       <meta property="og:type" content="website" />
       <meta property="og:image" content="/images/meta.jpg" />
-      <meta property="og:image:alt" content={DESCRIPTION} />
+      <meta property="og:image:alt" content={DESCRIPTION_FULL} />
       <meta property="og:url" content={domain} />
 
       <meta name="twitter:title" content={TITLE_EN} />
-      <meta name="twitter:description" content={DESCRIPTION} />
+      <meta name="twitter:description" content={DESCRIPTION_FULL} />
       <meta name="twitter:image" content="/images/meta.jpg" />
       <meta name="twitter:image:src" content="/images/meta.jpg" />
-      <meta name="twitter:image:alt" content={DESCRIPTION} />
+      <meta name="twitter:image:alt" content={DESCRIPTION_FULL} />
 
       {children}
 
