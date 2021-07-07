@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import React from "react";
 
 import Document, { Html, Head, Main, NextScript } from "next/document";
@@ -8,6 +9,7 @@ import {
   FACEBOOK_PAGE_ID,
   FACEBOOK_DOMAIN_ID,
   TWITTER_USERNAME,
+  KAKAO_APP_KEY,
 } from "@utils/constants";
 
 class Litemera extends Document {
@@ -132,6 +134,13 @@ class Litemera extends Document {
         <body>
           <Main />
           <NextScript />
+
+          <script src="https://developers.kakao.com/sdk/js/kakao.min.js" />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.Kakao.init("${KAKAO_APP_KEY}")`,
+            }}
+          />
         </body>
       </Html>
     );

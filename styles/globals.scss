@@ -18,12 +18,12 @@ body {
   font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
   ::-moz-selection {
-    color: #000;
+    color: $background;
     background: #fff;
   }
 
   ::selection {
-    color: #000;
+    color: $background;
     background: #fff;
   }
 

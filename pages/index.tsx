@@ -5,6 +5,7 @@ import { css } from "styled-jsx/css";
 
 import Footer from "@components/index/Footer";
 import DownloadBtn from "@components/misc/DownloadBtn";
+import KakaoBtn from "@components/misc/KakaoBtn";
 import MetaHead from "@components/misc/MetaHead";
 import {
   DOMAIN,
@@ -78,6 +79,7 @@ const Index: NextPage = () => {
           <DownloadBtn />
         </div>
         <Footer />
+        <KakaoBtn />
       </div>
     </>
   );
