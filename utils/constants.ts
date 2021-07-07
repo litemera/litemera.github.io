@@ -1,7 +1,7 @@
 export const DOMAIN = "https://litemera.github.io/";
 
 export const TITLE_EN = "Litemera";
-export const TITLE_KO = "Litemera";
+export const TITLE_KO = "라이트메라";
 export const DESCRIPTION = "지워지는 카메라";
 export const APP_FULL_NAME = `${TITLE_EN} - ${DESCRIPTION}`;
 export const KEYWORDS = `${TITLE_EN}, ${TITLE_KO}, 카메라, 사진, 앱, 어플, 어플리케이션, 앱스토어, 구글플레이, 애플, 안드로이드, 플레이스토어, 와이파이, 카페, 주차장, 화장실, 비밀번호, 공유`;

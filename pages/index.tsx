@@ -73,7 +73,7 @@ const Index: NextPage = () => {
           />
           <h1>{TITLE_EN}</h1>
           <h2>
-            {DESCRIPTION} - {TITLE_KO}
+            {DESCRIPTION}, {TITLE_KO}
           </h2>
           <DownloadBtn />
         </div>
