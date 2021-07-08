@@ -1,4 +1,4 @@
-[![Litemera](https://litemera.github.io/images/launcher.svg)](https://litemera.github.io/)
+[![Litemera](https://litemera.github.io/images/meta.jpg)](https://litemera.github.io/)
 
 # Litemera
 
