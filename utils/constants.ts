@@ -22,3 +22,5 @@ export const TWITTER_USERNAME = `litemera_app`;
 
 export const KAKAO_APP_KEY = `b0623e0015f1420de817b4bb34ac4c86`;
 export const KAKAO_CHANNEL_ID = `_pjxdfs`;
+
+export const GA_TRACKING_ID = `G-9VYJG4BEKX`;

@@ -10,7 +10,32 @@ import {
   FACEBOOK_DOMAIN_ID,
   TWITTER_USERNAME,
   KAKAO_APP_KEY,
+  GA_TRACKING_ID,
 } from "@utils/constants";
+
+const GtagScript = () => {
+  return (
+    <>
+      <script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+      />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
+    </>
+  );
+};
 
 class Litemera extends Document {
   static async getInitialProps(ctx: any) {
@@ -22,6 +47,8 @@ class Litemera extends Document {
     return (
       <Html lang="ko">
         <Head>
+          <GtagScript />
+
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta charSet="UTF-8" />
 
