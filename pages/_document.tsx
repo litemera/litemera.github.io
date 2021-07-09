@@ -3,6 +3,9 @@ import React from "react";
 
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
+import Firebase from "@analytics/Firebase";
+import GoogleAnalytics from "@analytics/GoogleAnalytics";
+import Pixel from "@analytics/Pixel";
 import {
   TITLE_EN,
   FACEBOOK_APP_ID,
@@ -10,60 +13,7 @@ import {
   FACEBOOK_DOMAIN_ID,
   TWITTER_USERNAME,
   KAKAO_APP_KEY,
-  GA_TRACKING_ID,
-  FACEBOOK_PIXEL_ID,
 } from "@utils/constants";
-
-const GtagScript = () => {
-  return (
-    <>
-      <script
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-      />
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', '${GA_TRACKING_ID}', {
-              page_path: window.location.pathname,
-            });
-          `,
-        }}
-      />
-    </>
-  );
-};
-
-const Pixel = () => (
-  <>
-    <script
-      async
-      dangerouslySetInnerHTML={{
-        __html: `
-          !function(f,b,e,v,n,t,s)
-          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-          n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window, document,'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '${FACEBOOK_PIXEL_ID}');
-          fbq('track', 'PageView');
-        `,
-      }}
-    />
-    <noscript
-      dangerouslySetInnerHTML={{
-        __html: `<img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=${FACEBOOK_PIXEL_ID}&ev=PageView&noscript=1"></img>`,
-      }}
-    />
-  </>
-);
 
 class Litemera extends Document {
   static async getInitialProps(ctx: any) {
@@ -75,7 +25,7 @@ class Litemera extends Document {
     return (
       <Html lang="ko">
         <Head>
-          <GtagScript />
+          <GoogleAnalytics />
 
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta charSet="UTF-8" />
@@ -172,6 +122,8 @@ class Litemera extends Document {
               __html: `window.Kakao.init("${KAKAO_APP_KEY}")`,
             }}
           />
+
+          <Firebase />
         </body>
       </Html>
     );
