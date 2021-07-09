@@ -22,4 +22,3 @@ export const userAgent = (android, ios) => {
     } else window["open"](android);
   }
 };
-
