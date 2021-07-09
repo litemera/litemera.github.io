@@ -101,12 +101,14 @@ class Litemera extends Document {
             sizes="16x16"
             href="/favicon/favicon-16x16.png"
           />
+
           <link rel="manifest" href="/favicon/manifest.json" />
           <meta name="msapplication-TileColor" content="#121212" />
           <meta
             name="msapplication-TileImage"
             content="/favicon/ms-icon-144x144.png"
           />
+
           <meta name="theme-color" content="#121212" />
           <link rel="shortcut icon" href="/favicon/favicon.ico" />
 
