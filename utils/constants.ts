@@ -5,7 +5,7 @@ export const TITLE_KO = `라이트메라`;
 export const DESCRIPTION = `지워지는 카메라`;
 export const DESCRIPTION_FULL = `${TITLE_EN}: 찍으면 24시간 뒤 자동으로 지워지는 카메라, ${TITLE_KO}`;
 export const APP_FULL_NAME = `${TITLE_EN} - ${DESCRIPTION}`;
-export const META_KEYWORDS = `${TITLE_EN}, ${TITLE_KO}, 카메라, 사진, 앱, 어플, 어플리케이션, 앱스토어, 구글플레이, 애플, 안드로이드, 플레이스토어, 와이파이, 카페, 주차장, 화장실, 비밀번호, 공유`;
+export const META_KEYWORDS = `${TITLE_EN}, ${TITLE_KO}, 카메라, Camera, 사진, Photo, Image, Picture, 앱, App, 어플, 어플리케이션, Application, 앱스토어, AppStore, 구글플레이, Google Play, 애플, Apple, 안드로이드, Android, 플레이스토어, 와이파이, Wifi, 카페, Cafe, 주차장, Parking, 화장실, 비밀번호, Password, 공유, Share, 업무, 업무용, 리트메라, lightmera`;
 
 export const IOS_ID = `1575339252`;
 export const IOS_URL = `https://apps.apple.com/kr/app/id${IOS_ID}`;
@@ -25,3 +25,5 @@ export const KAKAO_CHANNEL_ID = `_pjxdfs`;
 
 export const GA_TRACKING_ID = `G-9VYJG4BEKX`;
 export const FACEBOOK_PIXEL_ID = `2382594021876129`;
+
+export const DEEPLINK = ``;

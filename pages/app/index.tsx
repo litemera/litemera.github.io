@@ -12,6 +12,7 @@ import {
   IOS_URL,
   ANDROID_PACKAGE,
   AND_URL,
+  DEEPLINK,
 } from "@utils/constants";
 import { userAgent } from "@utils/index";
 
@@ -45,16 +46,16 @@ const AppBridge: NextPage = () => {
     <React.StrictMode>
       <MetaHead
         title={title}
-        keywords={`${META_KEYWORDS},앱스토어,구글플레이,플레이스토어,원스토어`}
+        keywords={META_KEYWORDS}
         canonical={`${DOMAIN}/app`}
       >
-        {/* <meta property="al:ios:url" content={`${DEEPLINK}`} /> */}
+        <meta property="al:ios:url" content={DEEPLINK} />
         <meta property="al:ios:app_store_id" content={`${IOS_ID}`} />
         <meta property="al:ios:app_name" content={TITLE_EN} />
-        {/* <meta property="al:android:url" content={`${DEEPLINK}`} /> */}
+        <meta property="al:android:url" content={DEEPLINK} />
         <meta property="al:android:app_name" content={TITLE_EN} />
         <meta property="al:android:package" content={ANDROID_PACKAGE} />
-        {/* <link rel="alternate" href={`${DEEPLINK}`} /> */}
+        <link rel="alternate" href={DEEPLINK} />
         <meta property="al:web:url" content={`${DOMAIN}`} />
         <script
           type="application/ld+json"
