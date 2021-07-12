@@ -1,55 +1,19 @@
 import React from "react";
 
 import { NextPage } from "next";
-import dynamic from "next/dynamic";
-import { css } from "styled-jsx/css";
 
-import Footer from "@components/index/Footer";
-import DownloadBtn from "@components/misc/DownloadBtn";
+import Hero from "@components/index/Hero";
 import MetaHead from "@components/misc/MetaHead";
+import Layout from "@layout/index";
 import {
   DOMAIN,
   TITLE_EN,
-  TITLE_KO,
-  DESCRIPTION,
   FACEBOOK_USERNAME,
   INSTAGRAM_USERNAME,
   TWITTER_USERNAME,
 } from "@utils/constants";
-import { useMediaQuery } from "@utils/hooks/useMediaQuery";
-
-const KakaoBtn = dynamic(() => import("@components/misc/KakaoBtn"));
-
-const style = css`
-  .index {
-    margin: 96px auto 0;
-    text-align: center;
-  }
-
-  .index > div {
-    display: inline-block;
-  }
-
-  h1 {
-    margin-bottom: -8px;
-  }
-
-  @media screen and (max-width: 420px) {
-    .index {
-      margin: 64px auto 0;
-    }
-  }
-
-  @media screen and (max-width: 320px) {
-    .index {
-      margin: 48px auto 0;
-    }
-  }
-`;
 
 const Index: NextPage = () => {
-  const isMobile: boolean = useMediaQuery(`(max-width: 420px)`);
-
   const jsonLdData = `{
       "@context": "https://schema.org/",
       "@type": "Organization",
@@ -65,7 +29,6 @@ const Index: NextPage = () => {
 
   return (
     <>
-      <style jsx>{style}</style>
       <MetaHead>
         <script
           type="application/ld+json"
@@ -74,23 +37,9 @@ const Index: NextPage = () => {
           }}
         />
       </MetaHead>
-      <div className="index">
-        <div>
-          <img
-            width="96px"
-            height="96px"
-            alt={TITLE_EN}
-            src="/images/launcher.svg"
-          />
-          <h1>{TITLE_EN}</h1>
-          <h2>
-            {DESCRIPTION}, {TITLE_KO}
-          </h2>
-          <DownloadBtn />
-        </div>
-        <Footer />
-        {isMobile ? null : <KakaoBtn />}
-      </div>
+      <Layout>
+        <Hero />
+      </Layout>
     </>
   );
 };

@@ -12,7 +12,6 @@ import {
   FACEBOOK_PAGE_ID,
   FACEBOOK_DOMAIN_ID,
   TWITTER_USERNAME,
-  KAKAO_APP_KEY,
 } from "@utils/constants";
 
 class Litemera extends Document {
@@ -117,13 +116,6 @@ class Litemera extends Document {
         <body>
           <Main />
           <NextScript />
-
-          <script src="https://developers.kakao.com/sdk/js/kakao.min.js" />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `window.Kakao.init("${KAKAO_APP_KEY}")`,
-            }}
-          />
 
           <Firebase />
         </body>

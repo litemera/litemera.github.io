@@ -25,6 +25,7 @@ const nextConfig = {
     config.resolve.alias["@utils"] = path.join(__dirname, "utils");
     config.resolve.alias["@components"] = path.join(__dirname, "components");
     config.resolve.alias["@pages"] = path.join(__dirname, "pages");
+    config.resolve.alias["@layout"] = path.join(__dirname, "layout");
     config.resolve.alias["@analytics"] = path.join(__dirname, "analytics");
 
     if (isServer && !dev && process.env.NEXT_MINIMIZE === "true") {
