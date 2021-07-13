@@ -18,7 +18,6 @@ const Firebase: React.FC = () => (
             appId: "1:666182904715:web:d59fc2b9e3970694525d8e",
             measurementId: "G-8MWB8N55PH"
           };
-          // Initialize Firebase
           firebase.initializeApp(firebaseConfig);
           firebase.analytics();
         `,

@@ -4,16 +4,7 @@ import { NextPage } from "next";
 import Router from "next/router";
 
 import MetaHead from "@components/misc/MetaHead";
-import {
-  DOMAIN,
-  TITLE,
-  META_KEYWORDS,
-  IOS_ID,
-  IOS_URL,
-  ANDROID_PACKAGE,
-  AND_URL,
-  DEEPLINK,
-} from "@utils/constants";
+import { DOMAIN, TITLE, IOS_URL, AND_URL } from "@utils/constants";
 import { userAgent } from "@utils/index";
 
 const AppBridge: NextPage = () => {
@@ -44,19 +35,7 @@ const AppBridge: NextPage = () => {
 
   return (
     <React.StrictMode>
-      <MetaHead
-        title={title}
-        keywords={META_KEYWORDS}
-        canonical={`${DOMAIN}/app`}
-      >
-        <meta property="al:ios:url" content={DEEPLINK} />
-        <meta property="al:ios:app_store_id" content={`${IOS_ID}`} />
-        <meta property="al:ios:app_name" content={TITLE} />
-        <meta property="al:android:url" content={DEEPLINK} />
-        <meta property="al:android:app_name" content={TITLE} />
-        <meta property="al:android:package" content={ANDROID_PACKAGE} />
-        <link rel="alternate" href={DEEPLINK} />
-        <meta property="al:web:url" content={`${DOMAIN}`} />
+      <MetaHead title={title} canonical={`${DOMAIN}/app`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
