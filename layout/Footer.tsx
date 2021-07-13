@@ -17,6 +17,7 @@ const style = css`
     width: 100vw;
     text-align: center;
     padding: 64px 0;
+    background-color: #262626;
   }
 
   .tos {

@@ -4,6 +4,7 @@ import { NextPage } from "next";
 
 import Hero from "@components/index/Hero";
 import Introduce from "@components/index/Introduce";
+import Mock from "@components/index/Mock";
 import MetaHead from "@components/misc/MetaHead";
 import Layout from "@layout/index";
 import {
@@ -41,6 +42,7 @@ const Index: NextPage = () => {
       <Layout>
         <Hero />
         <Introduce />
+        <Mock />
       </Layout>
     </>
   );
