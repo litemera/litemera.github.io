@@ -7,7 +7,7 @@ import Firebase from "@analytics/Firebase";
 import GoogleAnalytics from "@analytics/GoogleAnalytics";
 import Pixel from "@analytics/Pixel";
 import {
-  TITLE_EN,
+  TITLE,
   FACEBOOK_APP_ID,
   FACEBOOK_PAGE_ID,
   FACEBOOK_DOMAIN_ID,
@@ -43,7 +43,7 @@ class Litemera extends Document {
           <meta name="robots" content="index,follow" />
           <meta name="googlebot" content="index,follow" />
 
-          <meta name="author" content={TITLE_EN} />
+          <meta name="author" content={TITLE} />
           <meta property="og:locale" content="ko_KR" />
 
           <meta name="twitter:card" content="summary_large_image" />

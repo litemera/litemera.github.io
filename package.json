@@ -2,7 +2,7 @@
   "name": "litemera",
   "version": "0.1.0",
   "private": true,
-  "description": "Litemera: 찍으면 24시간 뒤에 자동으로 지워지는 카메라, 라이트메라",
+  "description": "Take a photo with Litemera, it will be deleted automatically after 24 hours.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@types/react": "^17.0.14",
-    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/eslint-plugin": "^4.28.3",
     "babel-plugin-transform-define": "^2.0.0",
     "eslint": "^7.30.0",
     "eslint-config-next": "^11.0.1",

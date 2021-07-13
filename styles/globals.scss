@@ -9,11 +9,11 @@
 @import "./modules/variables.scss";
 
 html {
-  color: #fff;
   background-color: $background;
 }
 
 body {
+  color: #fff;
   padding: 0;
   margin: 0;
   line-height: 1.5;
@@ -39,12 +39,47 @@ body {
   }
 
   h1 {
-    font-size: units(8);
+    font-size: units(12);
     font-weight: 900;
+    text-align: center;
+
+    @media #{$pablet} {
+      font-size: units(8);
+    }
   }
 
   h2 {
     font-size: units(6);
     font-weight: 300;
+    text-align: center;
+    opacity: 0.54;
+
+    @media #{$pablet} {
+      font-size: units(4);
+    }
+  }
+
+  .section {
+    padding: 48px 0 96px;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    max-width: calc(#{$desktop_size} - 64px);
+
+    @media #{$desktop} {
+      padding: 0 64px;
+      width: calc($desktop_size - 64px);
+    }
+
+    @media #{$tablet} {
+      padding: 0 32px;
+      width: calc($tablet_size - 32px);
+    }
+
+    @media #{$pablet} {
+      padding: 0 16px;
+      width: calc($pablet_size - 16px);
+    }
   }
 }

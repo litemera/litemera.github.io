@@ -3,11 +3,12 @@ import React from "react";
 import { NextPage } from "next";
 
 import Hero from "@components/index/Hero";
+import Introduce from "@components/index/Introduce";
 import MetaHead from "@components/misc/MetaHead";
 import Layout from "@layout/index";
 import {
   DOMAIN,
-  TITLE_EN,
+  TITLE,
   FACEBOOK_USERNAME,
   INSTAGRAM_USERNAME,
   TWITTER_USERNAME,
@@ -17,7 +18,7 @@ const Index: NextPage = () => {
   const jsonLdData = `{
       "@context": "https://schema.org/",
       "@type": "Organization",
-      "name": "${TITLE_EN}",
+      "name": "${TITLE}",
       "url": "${DOMAIN}",
       "sameAs": [
         "https://www.facebook.com/${FACEBOOK_USERNAME}",
@@ -39,6 +40,7 @@ const Index: NextPage = () => {
       </MetaHead>
       <Layout>
         <Hero />
+        <Introduce />
       </Layout>
     </>
   );

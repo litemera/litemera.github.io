@@ -1,13 +1,9 @@
-import { KAKAO_CHANNEL_ID } from "@utils/constants";
-
-export const plusFriendChat = (): void => {
-  return (window["Kakao" as any] as any).Channel.chat({
-    channelPublicId: KAKAO_CHANNEL_ID,
-  });
+export const capitalizeFirstLetter = (str: string): string => {
+  return str.charAt(0).toUpperCase() + str.slice(1);
 };
 
-export const userAgent = (android, ios) => {
-  const userAgent = navigator.userAgent;
+export const userAgent = (android: any, ios: any): void => {
+  const userAgent: string = navigator.userAgent;
 
   if (typeof window !== "undefined") {
     if (/android/i.test(userAgent)) {

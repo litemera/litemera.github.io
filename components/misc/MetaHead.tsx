@@ -2,13 +2,7 @@ import React from "react";
 
 import Head from "next/head";
 
-import {
-  DOMAIN,
-  TITLE_EN,
-  APP_FULL_NAME,
-  DESCRIPTION_FULL,
-  META_KEYWORDS,
-} from "@utils/constants";
+import { DOMAIN, TITLE, DESCRIPTION, META_KEYWORDS } from "@utils/constants";
 
 interface MetaHeadProps {
   title?: string;
@@ -19,8 +13,8 @@ interface MetaHeadProps {
 }
 
 const MetaHead: React.FC<MetaHeadProps> = ({
-  title = APP_FULL_NAME,
-  description = DESCRIPTION_FULL,
+  title = TITLE,
+  description = DESCRIPTION,
   keywords = META_KEYWORDS,
   canonical = DOMAIN,
   children,
@@ -38,7 +32,7 @@ const MetaHead: React.FC<MetaHeadProps> = ({
         content="width=device-width, initial-scale=1.0, viewport-fit=cover"
       />
 
-      <meta property="og:title" content={TITLE_EN} />
+      <meta property="og:title" content={TITLE} />
       <meta property="og:site_name" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
@@ -46,7 +40,7 @@ const MetaHead: React.FC<MetaHeadProps> = ({
       <meta property="og:image:alt" content={description} />
       <meta property="og:url" content={canonical} />
 
-      <meta name="twitter:title" content={TITLE_EN} />
+      <meta name="twitter:title" content={TITLE} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content="/images/meta.jpg" />
       <meta name="twitter:image:src" content="/images/meta.jpg" />

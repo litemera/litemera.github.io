@@ -4,11 +4,12 @@ import { NextPage } from "next";
 import { css } from "styled-jsx/css";
 
 import DownloadBtn from "@components/misc/DownloadBtn";
-import { TITLE_EN, TITLE_KO, DESCRIPTION } from "@utils/constants";
+import { TITLE } from "@utils/constants";
+import { useMediaQuery } from "@utils/hooks/useMediaQuery";
 
 const style = css`
   .hero {
-    margin: 96px auto 0;
+    margin: 96px auto 32px;
     text-align: center;
   }
 
@@ -34,20 +35,23 @@ const style = css`
 `;
 
 const Hero: NextPage = () => {
+  const isMobile: boolean = useMediaQuery(`(max-width: 420px)`);
+
   return (
     <>
       <style jsx>{style}</style>
-      <div className="hero">
-        <div>
+      <div className="hero section">
+        <div className="wrapper">
           <img
             width="96px"
             height="96px"
-            alt={TITLE_EN}
+            alt={TITLE}
             src="/images/launcher.svg"
           />
-          <h1>{TITLE_EN}</h1>
+          <h1>{TITLE}</h1>
           <h2>
-            {DESCRIPTION}, {TITLE_KO}
+            Take a photo with Litemera, it will be {isMobile ? null : <br />}
+            deleted automatically after 24 hours
           </h2>
           <DownloadBtn />
         </div>

@@ -4,20 +4,19 @@ import { NextPage } from "next";
 import { css } from "styled-jsx/css";
 
 import {
-  TITLE_KO,
+  TITLE,
   FACEBOOK_USERNAME,
   INSTAGRAM_USERNAME,
   TWITTER_USERNAME,
 } from "@utils/constants";
+import { capitalizeFirstLetter } from "@utils/index";
 
 const style = css`
   .footer {
-    position: fixed;
-    bottom: 0;
     margin: 0 auto;
     width: 100vw;
     text-align: center;
-    padding: 16px 0 32px;
+    padding: 64px 0;
   }
 
   .tos {
@@ -47,35 +46,36 @@ const style = css`
   }
 `;
 
-const Footer: NextPage = () => {
-  const tosItems = [
-    {
-      title: "개인정보처리방침",
-      href: "https://www.notion.so/volla/8aa9a7f58a0645f093ff96caa0877ac9",
-    },
-    {
-      title: "서비스이용약관",
-      href: "https://www.notion.so/volla/8aa9a7f58a0645f093ff96caa0877ac9",
-    },
-  ];
+const tosItems = [
+  {
+    title: "Privacy policy",
+    href: "https://www.notion.so/volla/8aa9a7f58a0645f093ff96caa0877ac9",
+  },
+  {
+    title: "Terms of service",
+    href: "https://www.notion.so/volla/8aa9a7f58a0645f093ff96caa0877ac9",
+  },
+];
 
-  const snsItems = [
-    {
-      src: `facebook`,
-      href: `facebook.com/${FACEBOOK_USERNAME}`,
-      title: `페이스북`,
-    },
-    {
-      src: `instagram`,
-      href: `instagram.com/${INSTAGRAM_USERNAME}/`,
-      title: `인스타그램`,
-    },
-    {
-      src: `twitter`,
-      href: `twitter.com/${TWITTER_USERNAME}`,
-      title: `트위터`,
-    },
-  ];
+const snsItems = [
+  {
+    src: `facebook`,
+    href: `facebook.com/${FACEBOOK_USERNAME}`,
+  },
+  {
+    src: `instagram`,
+    href: `instagram.com/${INSTAGRAM_USERNAME}/`,
+  },
+  {
+    src: `twitter`,
+    href: `twitter.com/${TWITTER_USERNAME}`,
+  },
+];
+
+const Footer: NextPage = () => {
+  const formatTitle = (str: string): string => {
+    return capitalizeFirstLetter(str);
+  };
 
   return (
     <>
@@ -85,12 +85,12 @@ const Footer: NextPage = () => {
           {tosItems.map((item, i: number) => (
             <a
               key={i}
-              title={item.title}
+              title={`${item.title}(Korean)`}
               href={item.href}
               target="_blank"
               rel="noreferrer"
             >
-              <span>{item.title}</span>
+              <span>{`${item.title}(Korean)`}</span>
             </a>
           ))}
         </div>
@@ -98,7 +98,7 @@ const Footer: NextPage = () => {
           {snsItems.map((item, i: number) => (
             <a
               key={i}
-              title={item.title}
+              title={formatTitle(item.src)}
               href={`https://${item.href}`}
               target="_blank"
               rel="noreferrer"
@@ -107,8 +107,8 @@ const Footer: NextPage = () => {
                 width="24px"
                 height="24px"
                 src={`images/ic-${item.src}-white.svg`}
-                alt={`${TITLE_KO} ${item.title}`}
-                title={`${TITLE_KO} ${item.title}`}
+                alt={`${TITLE} ${formatTitle(item.src)}`}
+                title={`${TITLE} ${formatTitle(item.src)}`}
               />
             </a>
           ))}
