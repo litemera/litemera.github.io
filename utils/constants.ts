@@ -20,4 +20,4 @@ export const TWITTER_USERNAME = `litemera_app`;
 export const GA_TRACKING_ID = `G-9VYJG4BEKX`;
 export const FACEBOOK_PIXEL_ID = `2382594021876129`;
 
-export const DEEPLINK = `litemera://deeplink`;
+export const DEEPLINK = `litemera://`;

@@ -2,7 +2,15 @@ import React from "react";
 
 import Head from "next/head";
 
-import { DOMAIN, TITLE, DESCRIPTION, META_KEYWORDS } from "@utils/constants";
+import {
+  DOMAIN,
+  TITLE,
+  DESCRIPTION,
+  META_KEYWORDS,
+  IOS_ID,
+  ANDROID_PACKAGE,
+  DEEPLINK,
+} from "@utils/constants";
 
 interface MetaHeadProps {
   title?: string;
@@ -23,7 +31,7 @@ const MetaHead: React.FC<MetaHeadProps> = ({
     <Head>
       <title>{title}</title>
 
-      <meta name="title" content={`${title}`} />
+      <meta name="title" content={title} />
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
 
@@ -46,9 +54,19 @@ const MetaHead: React.FC<MetaHeadProps> = ({
       <meta name="twitter:image:src" content="/images/meta.jpg" />
       <meta name="twitter:image:alt" content={description} />
 
+      <meta property="al:ios:url" content={DEEPLINK} />
+      <meta property="al:ios:app_store_id" content={`${IOS_ID}`} />
+      <meta property="al:ios:app_name" content={TITLE} />
+
+      <meta property="al:android:url" content={DEEPLINK} />
+      <meta property="al:android:app_name" content={TITLE} />
+      <meta property="al:android:package" content={ANDROID_PACKAGE} />
+      <meta property="al:web:url" content={canonical} />
+
       {children}
 
       <link rel="canonical" href={canonical} />
+      <link rel="alternate" href={`${DEEPLINK}`} />
     </Head>
   );
 };
