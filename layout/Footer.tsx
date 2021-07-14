@@ -74,10 +74,6 @@ const snsItems = [
 ];
 
 const Footer: NextPage = () => {
-  const formatTitle = (str: string): string => {
-    return capitalizeFirstLetter(str);
-  };
-
   return (
     <>
       <style jsx>{style}</style>
@@ -99,7 +95,7 @@ const Footer: NextPage = () => {
           {snsItems.map((item, i: number) => (
             <a
               key={i}
-              title={formatTitle(item.src)}
+              title={capitalizeFirstLetter(item.src)}
               href={`https://${item.href}`}
               target="_blank"
               rel="noreferrer"
@@ -108,8 +104,8 @@ const Footer: NextPage = () => {
                 width="24px"
                 height="24px"
                 src={`images/ic-${item.src}-white.svg`}
-                alt={`${TITLE} ${formatTitle(item.src)}`}
-                title={`${TITLE} ${formatTitle(item.src)}`}
+                alt={`${TITLE} ${capitalizeFirstLetter(item.src)}`}
+                title={`${TITLE} ${capitalizeFirstLetter(item.src)}`}
               />
             </a>
           ))}

@@ -61,8 +61,8 @@ const Introduce: NextPage = () => {
             {iconLists.map((item, i: number) => (
               <div className="item" key={i}>
                 <img
-                  width={1200}
-                  height={900}
+                  width="48px"
+                  height="48px"
                   src={`/images/icons/${item.src}.svg`}
                   alt={item.title}
                   title={item.title}

@@ -6,7 +6,7 @@ import Footer from "@layout/Footer";
 const Layout: React.FC = ({ children }) => {
   return (
     <>
-      <div>{children}</div>
+      {children}
       <Footer />
     </>
   );
