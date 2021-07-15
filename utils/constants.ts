@@ -1,6 +1,7 @@
 export const DOMAIN = "https://litemera.github.io";
 
 export const TITLE = `Litemera`;
+export const PAGE_TITLE = `${TITLE} - Automatically delete after 24 hours`;
 export const DESCRIPTION = `Take a photo with Litemera, it will be deleted automatically after 24 hours.`;
 export const META_KEYWORDS = `${TITLE}, Camera, Photo, Image, Picture, App, Application, AppStore, Google Play, Apple, Google, Android, Play Store, Wi-fi, Wifi, Caffe, Cafe, Parking lot, Parking, restroom, toilet, Password, Share, business, lightmera, litecam, lightcam`;
 

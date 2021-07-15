@@ -46,6 +46,7 @@ const Hero: NextPage = () => {
             width="96px"
             height="96px"
             alt={TITLE}
+            title={TITLE}
             src="/images/launcher.svg"
           />
           <h1>{TITLE}</h1>

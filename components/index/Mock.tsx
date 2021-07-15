@@ -30,16 +30,6 @@ const style = css`
     width: 80vw;
     max-width: 400px;
   }
-
-  @media screen and (max-width: 420px) {
-    .hero {
-    }
-  }
-
-  @media screen and (max-width: 320px) {
-    .hero {
-    }
-  }
 `;
 
 const Mock: NextPage = () => {

@@ -5,6 +5,7 @@ import Head from "next/head";
 import {
   DOMAIN,
   TITLE,
+  PAGE_TITLE,
   DESCRIPTION,
   META_KEYWORDS,
   IOS_ID,
@@ -21,7 +22,7 @@ interface MetaHeadProps {
 }
 
 const MetaHead: React.FC<MetaHeadProps> = ({
-  title = TITLE,
+  title = PAGE_TITLE,
   description = DESCRIPTION,
   keywords = META_KEYWORDS,
   canonical = DOMAIN,
