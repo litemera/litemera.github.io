@@ -1,6 +1,5 @@
 import React from "react";
 
-import { NextPage } from "next";
 import { css } from "styled-jsx/css";
 
 import DownloadBtn from "@components/misc/DownloadBtn";
@@ -34,7 +33,7 @@ const style = css`
   }
 `;
 
-const Hero: NextPage = () => {
+const Hero: React.FC = () => {
   const isMobile: boolean = useMediaQuery(`(max-width: 420px)`);
 
   return (

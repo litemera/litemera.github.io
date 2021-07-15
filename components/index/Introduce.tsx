@@ -1,6 +1,5 @@
 import React from "react";
 
-import { NextPage } from "next";
 import { css } from "styled-jsx/css";
 
 import { TITLE } from "@utils/constants";
@@ -43,7 +42,7 @@ const style = css`
   }
 `;
 
-const Introduce: NextPage = () => {
+const Introduce: React.FC = () => {
   const isMobile: boolean = useMediaQuery(`(max-width: 420px)`);
 
   return (

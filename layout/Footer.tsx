@@ -1,6 +1,5 @@
 import React from "react";
 
-import { NextPage } from "next";
 import { css } from "styled-jsx/css";
 
 import {
@@ -73,7 +72,7 @@ const snsItems = [
   },
 ];
 
-const Footer: NextPage = () => {
+const Footer: React.FC = () => {
   return (
     <>
       <style jsx>{style}</style>
