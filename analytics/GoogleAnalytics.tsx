@@ -2,13 +2,16 @@ import React from "react";
 
 import { GA_TRACKING_ID } from "@utils/constants";
 
-const GoogleAnalytics: React.FC = () => {
+interface GoogleAnalyticsPropsType {
+  id: string;
+}
+
+const GoogleAnalytics: React.FC<GoogleAnalyticsPropsType> = ({
+  id = GA_TRACKING_ID,
+}: GoogleAnalyticsPropsType) => {
   return (
     <>
-      <script
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-      />
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${id}`} />
       <script
         dangerouslySetInnerHTML={{
           __html: `
@@ -16,7 +19,7 @@ const GoogleAnalytics: React.FC = () => {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', '${GA_TRACKING_ID}', {
+            gtag('config', '${id}', {
               page_path: window.location.pathname,
             });
           `,

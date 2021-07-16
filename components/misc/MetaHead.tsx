@@ -13,7 +13,7 @@ import {
   DEEPLINK,
 } from "@utils/constants";
 
-interface MetaHeadProps {
+interface MetaHeadPropsType {
   title?: string;
   description?: string;
   keywords?: string;
@@ -21,13 +21,13 @@ interface MetaHeadProps {
   children?: any;
 }
 
-const MetaHead: React.FC<MetaHeadProps> = ({
+const MetaHead: React.FC<MetaHeadPropsType> = ({
   title = PAGE_TITLE,
   description = DESCRIPTION,
   keywords = META_KEYWORDS,
   canonical = DOMAIN,
   children,
-}: MetaHeadProps) => {
+}: MetaHeadPropsType) => {
   return (
     <Head>
       <title>{title}</title>

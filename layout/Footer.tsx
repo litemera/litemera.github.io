@@ -49,11 +49,11 @@ const style = css`
 const tosItems = [
   {
     title: "Privacy policy",
-    href: "https://www.notion.so/volla/8aa9a7f58a0645f093ff96caa0877ac9",
+    href: "8aa9a7f58a0645f093ff96caa0877ac9",
   },
   {
     title: "Terms of service",
-    href: "https://www.notion.so/volla/8aa9a7f58a0645f093ff96caa0877ac9",
+    href: "8aa9a7f58a0645f093ff96caa0877ac9",
   },
 ];
 
@@ -64,7 +64,7 @@ const snsItems = [
   },
   {
     src: `instagram`,
-    href: `instagram.com/${INSTAGRAM_USERNAME}/`,
+    href: `instagram.com/${INSTAGRAM_USERNAME}`,
   },
   {
     src: `twitter`,
@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
             <a
               key={i}
               title={`${item.title}(Korean)`}
-              href={item.href}
+              href={`https://www.notion.so/volla/${item.href}`}
               target="_blank"
               rel="noreferrer"
             >

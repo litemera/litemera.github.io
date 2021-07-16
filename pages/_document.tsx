@@ -12,6 +12,9 @@ import {
   FACEBOOK_PAGE_ID,
   FACEBOOK_DOMAIN_ID,
   TWITTER_USERNAME,
+  GA_TRACKING_ID,
+  GA_MEASUREMENT_ID,
+  FACEBOOK_PIXEL_ID,
 } from "@utils/constants";
 
 class Litemera extends Document {
@@ -24,7 +27,7 @@ class Litemera extends Document {
     return (
       <Html lang="ko">
         <Head>
-          <GoogleAnalytics />
+          <GoogleAnalytics id={GA_TRACKING_ID} />
 
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta charSet="UTF-8" />
@@ -111,13 +114,13 @@ class Litemera extends Document {
           <meta name="theme-color" content="#121212" />
           <link rel="shortcut icon" href="/favicon/favicon.ico" />
 
-          <Pixel />
+          <Pixel id={FACEBOOK_PIXEL_ID} />
         </Head>
         <body>
           <Main />
           <NextScript />
 
-          <Firebase />
+          <Firebase id={GA_MEASUREMENT_ID} />
         </body>
       </Html>
     );
