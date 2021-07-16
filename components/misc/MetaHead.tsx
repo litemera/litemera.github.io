@@ -3,7 +3,6 @@ import React from "react";
 import Head from "next/head";
 
 import {
-  DOMAIN,
   TITLE,
   PAGE_TITLE,
   DESCRIPTION,
@@ -12,6 +11,7 @@ import {
   ANDROID_PACKAGE,
   DEEPLINK,
 } from "@utils/constants";
+import { DOMAIN } from "utils/env";
 
 interface MetaHeadPropsType {
   title?: string;

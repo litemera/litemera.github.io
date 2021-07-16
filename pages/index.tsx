@@ -8,12 +8,12 @@ import Mock from "@components/index/Mock";
 import MetaHead from "@components/misc/MetaHead";
 import Layout from "@layout/index";
 import {
-  DOMAIN,
   TITLE,
   FACEBOOK_USERNAME,
   INSTAGRAM_USERNAME,
   TWITTER_USERNAME,
 } from "@utils/constants";
+import { DOMAIN } from "utils/env";
 
 const Index: NextPage = () => {
   const jsonLdData = `{

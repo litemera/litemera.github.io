@@ -4,8 +4,9 @@ import { NextPage } from "next";
 import Router from "next/router";
 
 import MetaHead from "@components/misc/MetaHead";
-import { DOMAIN, TITLE, IOS_URL, AND_URL } from "@utils/constants";
+import { TITLE, IOS_URL, AND_URL } from "@utils/constants";
 import { userAgent } from "@utils/index";
+import { DOMAIN } from "utils/env";
 
 const AppBridge: NextPage = () => {
   useEffect(() => {

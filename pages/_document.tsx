@@ -16,6 +16,7 @@ import {
   GA_MEASUREMENT_ID,
   FACEBOOK_PIXEL_ID,
 } from "@utils/constants";
+import { isProduction } from "@utils/env";
 
 class Litemera extends Document {
   static async getInitialProps(ctx: any) {
@@ -27,7 +28,7 @@ class Litemera extends Document {
     return (
       <Html lang="ko">
         <Head>
-          <GoogleAnalytics id={GA_TRACKING_ID} />
+          {isProduction ? <GoogleAnalytics id={GA_TRACKING_ID} /> : null}
 
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta charSet="UTF-8" />
@@ -114,13 +115,13 @@ class Litemera extends Document {
           <meta name="theme-color" content="#121212" />
           <link rel="shortcut icon" href="/favicon/favicon.ico" />
 
-          <Pixel id={FACEBOOK_PIXEL_ID} />
+          {isProduction ? <Pixel id={FACEBOOK_PIXEL_ID} /> : null}
         </Head>
         <body>
           <Main />
           <NextScript />
 
-          <Firebase id={GA_MEASUREMENT_ID} />
+          {isProduction ? <Firebase id={GA_MEASUREMENT_ID} /> : null}
         </body>
       </Html>
     );
