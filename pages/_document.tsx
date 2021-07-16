@@ -53,7 +53,6 @@ class Litemera extends Document {
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content={`@${TWITTER_USERNAME}`} />
           <meta name="twitter:creator" content={`@${TWITTER_USERNAME}`} />
-          <meta name="twitter:card" content="summary_large_image" />
 
           <link
             rel="apple-touch-icon"
