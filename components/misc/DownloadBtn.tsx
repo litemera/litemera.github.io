@@ -64,7 +64,14 @@ const style = css`
   }
 `;
 
-const storeTypes = [
+type storeTypes = {
+  store: string;
+  os: string;
+  href: string;
+  title: string;
+};
+
+const APP_STORE_TYPES: storeTypes[] = [
   {
     store: `App Store`,
     os: `ios`,
@@ -85,7 +92,7 @@ const DownloadBtn: React.FC = () => {
       <style jsx>{style}</style>
       <div className="dlBtn">
         <div className="dlBtn_wrapper">
-          {storeTypes.map((type, i: number) => (
+          {APP_STORE_TYPES.map((type, i: number) => (
             <div className={`btn ${type.os}`} role="button" key={i}>
               <a
                 href={type.href}

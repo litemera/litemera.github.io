@@ -46,7 +46,7 @@ const style = css`
   }
 `;
 
-const tosItems = [
+const TOS_ITEMS: { title: string; href: string }[] = [
   {
     title: "Privacy policy",
     href: "8aa9a7f58a0645f093ff96caa0877ac9",
@@ -57,7 +57,7 @@ const tosItems = [
   },
 ];
 
-const snsItems = [
+const SNS_ITEMS: { src: string; href: string }[] = [
   {
     src: `facebook`,
     href: `facebook.com/${FACEBOOK_USERNAME}`,
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
       <style jsx>{style}</style>
       <div className="footer">
         <div className="tos">
-          {tosItems.map((item, i: number) => (
+          {TOS_ITEMS.map((item, i: number) => (
             <a
               key={i}
               title={`${item.title}(Korean)`}
@@ -91,7 +91,7 @@ const Footer: React.FC = () => {
           ))}
         </div>
         <div className="sns">
-          {snsItems.map((item, i: number) => (
+          {SNS_ITEMS.map((item, i: number) => (
             <a
               key={i}
               title={capitalizeFirstLetter(item.src)}

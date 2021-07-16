@@ -56,7 +56,7 @@ const MetaHead: React.FC<MetaHeadPropsType> = ({
       <meta name="twitter:image:alt" content={description} />
 
       <meta property="al:ios:url" content={DEEPLINK} />
-      <meta property="al:ios:app_store_id" content={`${IOS_ID}`} />
+      <meta property="al:ios:app_store_id" content={IOS_ID} />
       <meta property="al:ios:app_name" content={TITLE} />
 
       <meta property="al:android:url" content={DEEPLINK} />
@@ -67,7 +67,7 @@ const MetaHead: React.FC<MetaHeadPropsType> = ({
       {children}
 
       <link rel="canonical" href={canonical} />
-      <link rel="alternate" href={`${DEEPLINK}`} />
+      <link rel="alternate" href={DEEPLINK} />
     </Head>
   );
 };
