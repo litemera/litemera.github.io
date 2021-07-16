@@ -74,7 +74,7 @@ const DownloadBtn: React.FC = () => {
             <a
               href={IOS_URL}
               target="_blank"
-              title={`앱스토어에서 ${TITLE} 다운받기`}
+              title={`Download on the ${TITLE}`}
               rel="noopener noreferrer"
             >
               <img
@@ -91,7 +91,7 @@ const DownloadBtn: React.FC = () => {
             <a
               href={AND_URL}
               target="_blank"
-              title={`구글 플레이에서 ${TITLE} 다운받기`}
+              title={`Get it on ${TITLE}`}
               rel="noopener noreferrer"
             >
               <img

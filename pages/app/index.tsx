@@ -15,7 +15,7 @@ const AppBridge: NextPage = () => {
     }, 1000);
   }, []);
 
-  const title = `${TITLE} 앱 다운받기`;
+  const title = `Download ${TITLE} app`;
 
   const jsonLdData = `{
     "@context": "https://schema.org",
