@@ -46,7 +46,7 @@ const Introduce: React.FC = () => {
   const isMobile: boolean = useMediaQuery(`(max-width: 420px)`);
 
   return (
-    <>
+    <React.StrictMode>
       <style jsx>{style}</style>
       <div className="introduce section">
         <div className="wrapper">
@@ -72,7 +72,7 @@ const Introduce: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </React.StrictMode>
   );
 };
 

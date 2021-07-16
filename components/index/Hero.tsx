@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
   const isMobile: boolean = useMediaQuery(`(max-width: 420px)`);
 
   return (
-    <>
+    <React.StrictMode>
       <style jsx>{style}</style>
       <div className="hero section">
         <div className="wrapper">
@@ -56,7 +56,7 @@ const Hero: React.FC = () => {
           <DownloadBtn />
         </div>
       </div>
-    </>
+    </React.StrictMode>
   );
 };
 

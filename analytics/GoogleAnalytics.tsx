@@ -10,7 +10,7 @@ const GoogleAnalytics: React.FC<GoogleAnalyticsPropsType> = ({
   id = GA_TRACKING_ID,
 }: GoogleAnalyticsPropsType) => {
   return (
-    <>
+    <React.StrictMode>
       <script async src={`https://www.googletagmanager.com/gtag/js?id=${id}`} />
       <script
         dangerouslySetInnerHTML={{
@@ -25,7 +25,7 @@ const GoogleAnalytics: React.FC<GoogleAnalyticsPropsType> = ({
           `,
         }}
       />
-    </>
+    </React.StrictMode>
   );
 };
 

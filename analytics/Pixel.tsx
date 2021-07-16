@@ -9,7 +9,7 @@ interface PixelPropsType {
 const Pixel: React.FC<PixelPropsType> = ({
   id = FACEBOOK_PIXEL_ID,
 }: PixelPropsType) => (
-  <>
+  <React.StrictMode>
     <script
       async
       dangerouslySetInnerHTML={{
@@ -32,7 +32,7 @@ const Pixel: React.FC<PixelPropsType> = ({
         __html: `<img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=${FACEBOOK_PIXEL_ID}&ev=PageView&noscript=1" />`,
       }}
     />
-  </>
+  </React.StrictMode>
 );
 
 export default Pixel;

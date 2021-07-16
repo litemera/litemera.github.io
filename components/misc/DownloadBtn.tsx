@@ -64,49 +64,49 @@ const style = css`
   }
 `;
 
+const storeTypes = [
+  {
+    store: `App Store`,
+    os: `ios`,
+    href: IOS_URL,
+    title: `Download on the App Store - ${TITLE}`,
+  },
+  {
+    store: `Google Play`,
+    os: `android`,
+    href: AND_URL,
+    title: `Get it on Google Play - ${TITLE}`,
+  },
+];
+
 const DownloadBtn: React.FC = () => {
   return (
-    <>
+    <React.StrictMode>
       <style jsx>{style}</style>
       <div className="dlBtn">
         <div className="dlBtn_wrapper">
-          <div className="btn ios" role="button">
-            <a
-              href={IOS_URL}
-              target="_blank"
-              title={`Download on the ${TITLE}`}
-              rel="noopener noreferrer"
-            >
-              <img
-                width="24px"
-                height="24px"
-                src={"/images/store-ios.png"}
-                alt={`App Store - ${TITLE}`}
-                title={`App Store - ${TITLE}`}
-              />
-              <span>App Store</span>
-            </a>
-          </div>
-          <div className="btn android" role="button">
-            <a
-              href={AND_URL}
-              target="_blank"
-              title={`Get it on ${TITLE}`}
-              rel="noopener noreferrer"
-            >
-              <img
-                width="24px"
-                height="24px"
-                src={"/images/store-android.png"}
-                alt={`Google Play - ${TITLE}`}
-                title={`Google Play - ${TITLE}`}
-              />
-              <span>Google Play</span>
-            </a>
-          </div>
+          {storeTypes.map((type, i: number) => (
+            <div className={`btn ${type.os}`} role="button" key={i}>
+              <a
+                href={type.href}
+                target="_blank"
+                title={type.title}
+                rel="noopener noreferrer"
+              >
+                <img
+                  width="24px"
+                  height="24px"
+                  src={`/images/store-${type.os}.png`}
+                  alt={type.title}
+                  title={type.title}
+                />
+                <span>{type.store}</span>
+              </a>
+            </div>
+          ))}
         </div>
       </div>
-    </>
+    </React.StrictMode>
   );
 };
 

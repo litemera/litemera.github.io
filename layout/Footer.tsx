@@ -74,7 +74,7 @@ const snsItems = [
 
 const Footer: React.FC = () => {
   return (
-    <>
+    <React.StrictMode>
       <style jsx>{style}</style>
       <div className="footer">
         <div className="tos">
@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
               title={`${item.title}(Korean)`}
               href={`https://www.notion.so/volla/${item.href}`}
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer noopener"
             >
               <span>{`${item.title}(Korean)`}</span>
             </a>
@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
               title={capitalizeFirstLetter(item.src)}
               href={`https://${item.href}`}
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer noopener"
             >
               <img
                 width="24px"
@@ -110,7 +110,7 @@ const Footer: React.FC = () => {
           ))}
         </div>
       </div>
-    </>
+    </React.StrictMode>
   );
 };
 

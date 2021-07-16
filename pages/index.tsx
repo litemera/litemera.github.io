@@ -30,7 +30,7 @@ const Index: NextPage = () => {
     }`;
 
   return (
-    <>
+    <React.StrictMode>
       <MetaHead>
         <script
           type="application/ld+json"
@@ -44,7 +44,7 @@ const Index: NextPage = () => {
         <Introduce />
         <Mock />
       </Layout>
-    </>
+    </React.StrictMode>
   );
 };
 

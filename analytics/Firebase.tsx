@@ -10,7 +10,7 @@ interface FirebasePropsType {
 const Firebase: React.FC<FirebasePropsType> = ({
   id = GA_MEASUREMENT_ID,
 }: FirebasePropsType) => (
-  <>
+  <React.StrictMode>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js" />
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js" />
     <script
@@ -31,7 +31,7 @@ const Firebase: React.FC<FirebasePropsType> = ({
         `,
       }}
     />
-  </>
+  </React.StrictMode>
 );
 
 export default Firebase;

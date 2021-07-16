@@ -35,7 +35,7 @@ const Mock: React.FC = () => {
   const isMobile: boolean = useMediaQuery(`(max-width: 420px)`);
 
   return (
-    <>
+    <React.StrictMode>
       <style jsx>{style}</style>
       <div className="mock section">
         <div className="wrapper">
@@ -49,7 +49,7 @@ const Mock: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </React.StrictMode>
   );
 };
 
