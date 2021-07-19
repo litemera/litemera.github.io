@@ -91,7 +91,7 @@ const Footer: React.FC<FooterPropsType> = ({ children }: FooterPropsType) => {
           alt={TITLE}
           title={TITLE}
           className="hit"
-          src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flitemera.github.io&count_bg=%001E1E1E&title_bg=%001E1E1E&icon=&icon_color=%001E1E1E&title=hits&edge_flat=false"
+          src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flitemera.github.io&count_bg=%001E1E1E&title_bg=%001E1E1E&icon=&edge_flat=false"
         />
         <div className="tos">
           {TOS_ITEMS.map((item, i: number) => (
