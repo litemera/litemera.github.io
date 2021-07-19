@@ -86,7 +86,13 @@ const APP_STORE_TYPES: storeTypes[] = [
   },
 ];
 
-const DownloadBtn: React.FC = () => {
+interface DownloadBtnPropsType {
+  children?: any;
+}
+
+const DownloadBtn: React.FC<DownloadBtnPropsType> = ({
+  children,
+}: DownloadBtnPropsType) => {
   return (
     <React.StrictMode>
       <style jsx>{style}</style>
@@ -112,6 +118,7 @@ const DownloadBtn: React.FC = () => {
             </div>
           ))}
         </div>
+        {children}
       </div>
     </React.StrictMode>
   );

@@ -4,10 +4,12 @@ import { FACEBOOK_PIXEL_ID } from "@utils/constants";
 
 interface PixelPropsType {
   id: string;
+  children?: any;
 }
 
 const Pixel: React.FC<PixelPropsType> = ({
   id = FACEBOOK_PIXEL_ID,
+  children,
 }: PixelPropsType) => (
   <React.StrictMode>
     <script
@@ -32,6 +34,7 @@ const Pixel: React.FC<PixelPropsType> = ({
         __html: `<img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=${FACEBOOK_PIXEL_ID}&ev=PageView&noscript=1" />`,
       }}
     />
+    {children}
   </React.StrictMode>
 );
 

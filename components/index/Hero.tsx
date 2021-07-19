@@ -33,7 +33,11 @@ const style = css`
   }
 `;
 
-const Hero: React.FC = () => {
+interface HeroPropsType {
+  children?: any;
+}
+
+const Hero: React.FC<HeroPropsType> = ({ children }: HeroPropsType) => {
   const isMobile: boolean = useMediaQuery(`(max-width: 420px)`);
 
   return (
@@ -54,6 +58,7 @@ const Hero: React.FC = () => {
             deleted automatically after 24 hours
           </h2>
           <DownloadBtn />
+          {children}
         </div>
       </div>
     </React.StrictMode>

@@ -42,7 +42,13 @@ const style = css`
   }
 `;
 
-const Introduce: React.FC = () => {
+interface IntroducePropsType {
+  children?: any;
+}
+
+const Introduce: React.FC<IntroducePropsType> = ({
+  children,
+}: IntroducePropsType) => {
   const isMobile: boolean = useMediaQuery(`(max-width: 420px)`);
 
   return (
@@ -70,6 +76,7 @@ const Introduce: React.FC = () => {
               </div>
             ))}
           </div>
+          {children}
         </div>
       </div>
     </React.StrictMode>

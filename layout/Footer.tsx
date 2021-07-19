@@ -72,7 +72,11 @@ const SNS_ITEMS: { src: string; href: string }[] = [
   },
 ];
 
-const Footer: React.FC = () => {
+interface FooterPropsType {
+  children?: any;
+}
+
+const Footer: React.FC<FooterPropsType> = ({ children }: FooterPropsType) => {
   return (
     <React.StrictMode>
       <style jsx>{style}</style>
@@ -109,6 +113,7 @@ const Footer: React.FC = () => {
             </a>
           ))}
         </div>
+        {children}
       </div>
     </React.StrictMode>
   );

@@ -4,10 +4,12 @@ import { GA_TRACKING_ID } from "@utils/constants";
 
 interface GoogleAnalyticsPropsType {
   id: string;
+  children?: any;
 }
 
 const GoogleAnalytics: React.FC<GoogleAnalyticsPropsType> = ({
   id = GA_TRACKING_ID,
+  children,
 }: GoogleAnalyticsPropsType) => {
   return (
     <React.StrictMode>
@@ -25,6 +27,7 @@ const GoogleAnalytics: React.FC<GoogleAnalyticsPropsType> = ({
           `,
         }}
       />
+      {children}
     </React.StrictMode>
   );
 };

@@ -5,10 +5,12 @@ import { GA_MEASUREMENT_ID } from "@utils/constants";
 
 interface FirebasePropsType {
   id: string;
+  children?: any;
 }
 
 const Firebase: React.FC<FirebasePropsType> = ({
   id = GA_MEASUREMENT_ID,
+  children,
 }: FirebasePropsType) => (
   <React.StrictMode>
     <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js" />
@@ -31,6 +33,7 @@ const Firebase: React.FC<FirebasePropsType> = ({
         `,
       }}
     />
+    {children}
   </React.StrictMode>
 );
 

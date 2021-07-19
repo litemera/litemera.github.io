@@ -31,7 +31,11 @@ const style = css`
   }
 `;
 
-const Mock: React.FC = () => {
+interface MockPropsType {
+  children?: any;
+}
+
+const Mock: React.FC<MockPropsType> = ({ children }: MockPropsType) => {
   const isMobile: boolean = useMediaQuery(`(max-width: 420px)`);
 
   return (
@@ -47,6 +51,7 @@ const Mock: React.FC = () => {
           <div className="img">
             <img src="/images/mock.png" alt={TITLE} title={TITLE} />
           </div>
+          {children}
         </div>
       </div>
     </React.StrictMode>
