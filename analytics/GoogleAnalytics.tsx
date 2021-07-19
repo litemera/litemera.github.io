@@ -20,7 +20,6 @@ const GoogleAnalytics: React.FC<GoogleAnalyticsPropsType> = ({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
             gtag('config', '${id}', {
               page_path: window.location.pathname,
             });

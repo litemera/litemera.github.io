@@ -24,8 +24,7 @@ const Index: NextPage = () => {
       "sameAs": [
         "https://www.facebook.com/${FACEBOOK_USERNAME}",
         "https://www.instagram.com/${INSTAGRAM_USERNAME}",
-        "https://twitter.com/${TWITTER_USERNAME}",
-        "https://github.com/litemera"
+        "https://twitter.com/${TWITTER_USERNAME}"
       ]
     }`;
 
