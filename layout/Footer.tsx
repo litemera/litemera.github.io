@@ -54,12 +54,12 @@ const style = css`
 
 const TOS_ITEMS: { title: string; href: string }[] = [
   {
-    title: "Privacy policy",
-    href: "8aa9a7f58a0645f093ff96caa0877ac9",
+    title: "Privacy Policy",
+    href: "Privacy-Policy-ddd8297bdaa7486c8d8a0a6a483d5c95",
   },
   {
-    title: "Terms of service",
-    href: "8aa9a7f58a0645f093ff96caa0877ac9",
+    title: "Terms of Use",
+    href: "Terms-of-Use-8b9ca8af6eae4ced8b34eec775f1fe99",
   },
 ];
 
@@ -97,12 +97,12 @@ const Footer: React.FC<FooterPropsType> = ({ children }: FooterPropsType) => {
           {TOS_ITEMS.map((item, i: number) => (
             <a
               key={i}
-              title={`${item.title}(Korean)`}
+              title={item.title}
               href={`https://www.notion.so/volla/${item.href}`}
               target="_blank"
               rel="noreferrer noopener"
             >
-              <span>{`${item.title}(Korean)`}</span>
+              <span>{item.title}</span>
             </a>
           ))}
         </div>
