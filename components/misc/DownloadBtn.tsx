@@ -1,68 +1,8 @@
 import React from "react";
 
-import css from "styled-jsx/css";
+import styled from "styled-components";
 
 import { TITLE, IOS_URL, AND_URL } from "@utils/constants";
-
-const style = css`
-  .dlBtn {
-    margin-top: 96px;
-  }
-
-  .dlBtn .btn {
-    width: auto;
-    height: 56px;
-    border-radius: 16px;
-    display: inline-block;
-    background-color: #fff;
-  }
-
-  .ios {
-    margin-right: 8px;
-  }
-
-  .btn img {
-    width: 24px;
-    height: 24px;
-    padding: 16px 12px 16px 16px;
-    display: inline-block;
-  }
-
-  .btn span {
-    color: #121212;
-    font-weight: 700;
-    line-height: 56px;
-    margin-right: 16px;
-    vertical-align: top;
-    display: inline-block;
-  }
-
-  @media screen and (max-width: 420px) {
-    .dlBtn {
-      margin-top: 64px;
-    }
-  }
-
-  @media screen and (max-width: 360px) {
-    .btn img {
-      padding-right: 8px;
-    }
-  }
-
-  @media screen and (max-width: 320px) {
-    .dlBtn {
-      margin-top: 32px;
-    }
-
-    .ios {
-      margin-right: 4px;
-    }
-
-    .btn img {
-      padding: 16px 4px 16px 12px;
-    }
-  }
-`;
 
 type storeTypes = {
   store: string;
@@ -86,6 +26,46 @@ const APP_STORE_TYPES: storeTypes[] = [
   },
 ];
 
+const Container = styled.div`
+  margin-top: 96px;
+  @media ${(props) => props.theme.mqbp.pablet} {
+    margin-top: 64px;
+  }
+  @media ${(props) => props.theme.mqbp.small} {
+    margin-top: 32px;
+  }
+`;
+
+const Button = styled.div`
+  width: auto;
+  height: 56px;
+  border-radius: 16px;
+  display: inline-block;
+  background-color: #fff;
+`;
+
+const BtnImage = styled.img`
+  width: 24px;
+  height: 24px;
+  padding: 16px 12px 16px 16px;
+  display: inline-block;
+  @media ${(props) => props.theme.mqbp.android} {
+    padding-right: 8px;
+  }
+  @media ${(props) => props.theme.mqbp.small} {
+    padding: 16px 4px 16px 12px;
+  }
+`;
+
+const BtnLabel = styled.span`
+  color: #121212;
+  font-weight: 700;
+  line-height: 56px;
+  margin-right: 16px;
+  vertical-align: top;
+  display: inline-block;
+`;
+
 interface DownloadBtnPropsType {
   children?: any;
 }
@@ -95,31 +75,35 @@ const DownloadBtn: React.FC<DownloadBtnPropsType> = ({
 }: DownloadBtnPropsType) => {
   return (
     <React.StrictMode>
-      <style jsx>{style}</style>
-      <div className="dlBtn">
-        <div className="dlBtn_wrapper">
-          {APP_STORE_TYPES.map((type, i: number) => (
-            <div className={`btn ${type.os}`} role="button" key={i}>
-              <a
-                href={type.href}
-                target="_blank"
+      <Container>
+        {APP_STORE_TYPES.map((type, i: number) => (
+          <Button
+            className={`btn ${type.os}`}
+            role="button"
+            key={i}
+            style={{
+              marginRight: type.os === "ios" ? "8px" : "0",
+            }}
+          >
+            <a
+              href={type.href}
+              target="_blank"
+              title={type.title}
+              rel="noopener noreferrer"
+            >
+              <BtnImage
+                width="24px"
+                height="24px"
+                src={`/images/store-${type.os}.png`}
+                alt={type.title}
                 title={type.title}
-                rel="noopener noreferrer"
-              >
-                <img
-                  width="24px"
-                  height="24px"
-                  src={`/images/store-${type.os}.png`}
-                  alt={type.title}
-                  title={type.title}
-                />
-                <span>{type.store}</span>
-              </a>
-            </div>
-          ))}
-        </div>
+              />
+              <BtnLabel>{type.store}</BtnLabel>
+            </a>
+          </Button>
+        ))}
         {children ? children : null}
-      </div>
+      </Container>
     </React.StrictMode>
   );
 };

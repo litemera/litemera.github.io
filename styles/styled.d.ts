@@ -7,6 +7,7 @@ declare module "styled-components" {
       tablet_size: string;
       pablet_size: string;
       mobile_size: string;
+      android_size: string;
       small_size: string;
     };
 
@@ -22,6 +23,7 @@ declare module "styled-components" {
       tablet: string;
       pablet: string;
       mobile: string;
+      android: string;
       small: string;
     };
   }

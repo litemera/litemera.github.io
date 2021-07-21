@@ -5,5 +5,6 @@ export const mqbp = {
   tablet: `screen and (max-width: ${breakPoints.tablet_size})`,
   pablet: `screen and (max-width: ${breakPoints.pablet_size})`,
   mobile: `screen and (max-width: ${breakPoints.mobile_size})`,
+  android: `screen and (max-width: ${breakPoints.android_size})`,
   small: `screen and (max-width: ${breakPoints.small_size})`,
 };

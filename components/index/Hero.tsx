@@ -17,10 +17,6 @@ const Container = styled.div`
   }
 `;
 
-const Div = styled.div`
-  display: inline-block;
-`;
-
 interface HeroPropsType {
   children?: any;
 }
@@ -31,7 +27,7 @@ const Hero: React.FC<HeroPropsType> = ({ children }: HeroPropsType) => {
   return (
     <React.StrictMode>
       <Container className="section">
-        <Div className="wrapper">
+        <div className="wrapper">
           <img
             width="96px"
             height="96px"
@@ -46,7 +42,7 @@ const Hero: React.FC<HeroPropsType> = ({ children }: HeroPropsType) => {
           </h2>
           <DownloadBtn />
           {children ? children : null}
-        </Div>
+        </div>
       </Container>
     </React.StrictMode>
   );
