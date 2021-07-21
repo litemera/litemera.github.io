@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-sync-scripts */
 import React from "react";
 
-import { GA_MEASUREMENT_ID } from "@utils/constants";
+import { FIREBASE_MEASUREMENT_ID } from "@utils/constants";
 
 interface FirebasePropsType {
   id: string;
@@ -9,7 +9,7 @@ interface FirebasePropsType {
 }
 
 const Firebase: React.FC<FirebasePropsType> = ({
-  id = GA_MEASUREMENT_ID,
+  id = FIREBASE_MEASUREMENT_ID,
   children,
 }: FirebasePropsType) => (
   <React.StrictMode>

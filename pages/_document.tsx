@@ -12,7 +12,7 @@ import {
   FACEBOOK_DOMAIN_ID,
   TWITTER_USERNAME,
   GA_TRACKING_ID,
-  GA_MEASUREMENT_ID,
+  FIREBASE_MEASUREMENT_ID,
   FACEBOOK_PIXEL_ID,
 } from "@utils/constants";
 import { isProduction } from "@utils/env";
@@ -119,7 +119,7 @@ class Litemera extends Document {
           <Main />
           <NextScript />
 
-          {isProduction ? <Firebase id={GA_MEASUREMENT_ID} /> : null}
+          {isProduction ? <Firebase id={FIREBASE_MEASUREMENT_ID} /> : null}
         </body>
       </Html>
     );

@@ -17,7 +17,7 @@ export const INSTAGRAM_USERNAME = `litemera.app`;
 export const TWITTER_USERNAME = `litemera_app`;
 
 export const GA_TRACKING_ID = `G-9VYJG4BEKX`;
-export const GA_MEASUREMENT_ID = `G-8MWB8N55PH`;
+export const FIREBASE_MEASUREMENT_ID = `G-8MWB8N55PH`;
 export const FACEBOOK_PIXEL_ID = `2382594021876129`;
 
 export const DEEPLINK = `litemera://`;
