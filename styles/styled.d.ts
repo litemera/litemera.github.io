@@ -16,6 +16,7 @@ declare module "styled-components" {
       background: string;
       lightgrey: string;
       darkgrey: string;
+      white: string;
     };
 
     mqbp: {

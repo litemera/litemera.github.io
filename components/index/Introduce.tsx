@@ -49,7 +49,7 @@ const Introduce: React.FC<IntroducePropsType> = ({
     <React.StrictMode>
       <Container className="introduce section">
         <div className="wrapper">
-          <h1 className="section--title">What is {TITLE}?</h1>
+          <h1>What is {TITLE}?</h1>
           <h2>
             Every photos taken with {TITLE} will be deleted automatically after
             24 hours. {isMobile ? null : <br />}We do not upload the photos to

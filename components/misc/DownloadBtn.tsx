@@ -41,7 +41,7 @@ const Button = styled.div`
   height: 56px;
   border-radius: 16px;
   display: inline-block;
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors.white};
 `;
 
 const BtnImage = styled.img`

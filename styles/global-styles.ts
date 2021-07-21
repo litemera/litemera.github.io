@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    color: #FFFFFF;
+    color: ${theme.colors.white};
     padding: 0;
     margin: 0;
     line-height: 1.5;
@@ -30,12 +30,12 @@ export const GlobalStyle = createGlobalStyle`
 
   ::-moz-selection {
     color: ${theme.colors.background};
-    background: #FFFFFF;
+    background: ${theme.colors.white};
   }
 
   ::selection {
     color: ${theme.colors.background};
-    background: #FFFFFF;
+    background: ${theme.colors.white};
   }
 
   .section {

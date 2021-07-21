@@ -103,7 +103,7 @@ const Footer: React.FC<FooterPropsType> = ({ children }: FooterPropsType) => {
             </a>
           ))}
         </Tos>
-        <div className="sns">
+        <div>
           {SNS_ITEMS.map((item, i: number) => (
             <a
               key={i}
