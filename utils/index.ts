@@ -1,5 +1,5 @@
-export const capitalizeFirstLetter = (str: string): string => {
-  return str.charAt(0).toUpperCase() + str.slice(1);
+export const capitalizeFirstLetter = (text: string): string => {
+  return text.charAt(0).toUpperCase() + text.slice(1);
 };
 
 export const userAgent = (android: any, ios: any): void => {
