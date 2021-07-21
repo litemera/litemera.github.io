@@ -14,11 +14,11 @@ const ImageBox = styled.div`
   margin-top: 64px;
   position: relative;
   text-align: center;
-`;
 
-const Image = styled.img`
-  width: 80vw;
-  max-width: 400px;
+  & > img {
+    width: 80vw;
+    max-width: 400px;
+  }
 `;
 
 interface MockPropsType {
@@ -38,7 +38,7 @@ const Mock: React.FC<MockPropsType> = ({ children }: MockPropsType) => {
             Litemera will delete them for you.
           </h2>
           <ImageBox>
-            <Image src="/images/mock.png" alt={TITLE} title={TITLE} />
+            <img src="/images/mock.png" alt={TITLE} title={TITLE} />
           </ImageBox>
           {children ? children : null}
         </div>

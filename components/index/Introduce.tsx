@@ -25,15 +25,15 @@ const GridBox = styled.div`
   display: grid;
   grid-gap: 16px;
   grid-template-columns: repeat(${iconLists.length}, 1fr);
-`;
 
-const GridItem = styled.div`
-  text-align: center;
-`;
+  div {
+    text-align: center;
 
-const Image = styled.img`
-  width: 48px;
-  height: 48px;
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
 `;
 
 interface IntroducePropsType {
@@ -47,7 +47,7 @@ const Introduce: React.FC<IntroducePropsType> = ({
 
   return (
     <React.StrictMode>
-      <Container className="introduce section">
+      <Container className="section">
         <div className="wrapper">
           <h1>What is {TITLE}?</h1>
           <h2>
@@ -57,8 +57,8 @@ const Introduce: React.FC<IntroducePropsType> = ({
           </h2>
           <GridBox>
             {iconLists.map((item, i: number) => (
-              <GridItem key={i}>
-                <Image
+              <div key={i}>
+                <img
                   width="48px"
                   height="48px"
                   src={`/images/icons/${item.src}.svg`}
@@ -66,7 +66,7 @@ const Introduce: React.FC<IntroducePropsType> = ({
                   title={item.title}
                 />
                 <h3>{item.title}</h3>
-              </GridItem>
+              </div>
             ))}
           </GridBox>
           {children ? children : null}

@@ -34,36 +34,36 @@ const Container = styled.div`
   @media ${(props) => props.theme.mqbp.small} {
     margin-top: 32px;
   }
-`;
 
-const Button = styled.div`
-  width: auto;
-  height: 56px;
-  border-radius: 16px;
-  display: inline-block;
-  background-color: ${(props) => props.theme.colors.white};
-`;
+  div {
+    width: auto;
+    height: 56px;
+    border-radius: 16px;
+    display: inline-block;
+    background-color: ${(props) => props.theme.colors.white};
 
-const BtnImage = styled.img`
-  width: 24px;
-  height: 24px;
-  padding: 16px 12px 16px 16px;
-  display: inline-block;
-  @media ${(props) => props.theme.mqbp.android} {
-    padding-right: 8px;
+    img {
+      width: 24px;
+      height: 24px;
+      padding: 16px 12px 16px 16px;
+      display: inline-block;
+      @media ${(props) => props.theme.mqbp.android} {
+        padding-right: 8px;
+      }
+      @media ${(props) => props.theme.mqbp.small} {
+        padding: 16px 4px 16px 12px;
+      }
+    }
+
+    span {
+      color: #121212;
+      font-weight: 700;
+      line-height: 56px;
+      margin-right: 16px;
+      vertical-align: top;
+      display: inline-block;
+    }
   }
-  @media ${(props) => props.theme.mqbp.small} {
-    padding: 16px 4px 16px 12px;
-  }
-`;
-
-const BtnLabel = styled.span`
-  color: #121212;
-  font-weight: 700;
-  line-height: 56px;
-  margin-right: 16px;
-  vertical-align: top;
-  display: inline-block;
 `;
 
 interface DownloadBtnPropsType {
@@ -77,8 +77,8 @@ const DownloadBtn: React.FC<DownloadBtnPropsType> = ({
     <React.StrictMode>
       <Container>
         {APP_STORE_TYPES.map((type, i: number) => (
-          <Button
-            className={`btn ${type.os}`}
+          <div
+            className={type.os}
             role="button"
             key={i}
             style={{
@@ -91,16 +91,16 @@ const DownloadBtn: React.FC<DownloadBtnPropsType> = ({
               title={type.title}
               rel="noopener noreferrer"
             >
-              <BtnImage
+              <img
                 width="24px"
                 height="24px"
                 src={`/images/store-${type.os}.png`}
                 alt={type.title}
                 title={type.title}
               />
-              <BtnLabel>{type.store}</BtnLabel>
+              <span>{type.store}</span>
             </a>
-          </Button>
+          </div>
         ))}
         {children ? children : null}
       </Container>

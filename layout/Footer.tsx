@@ -42,26 +42,26 @@ const Container = styled.div`
   text-align: center;
   padding: 64px 0;
   background-color: ${(props) => props.theme.colors.lightgrey};
-`;
 
-const Hit = styled.img`
-  opacity: 0.54;
-  margin: 0 auto 16px;
-  display: inline-block;
+  & > img {
+    opacity: 0.54;
+    margin: 0 auto 16px;
+    display: inline-block;
+  }
 `;
 
 const Tos = styled.div`
   margin-bottom: 8px;
-`;
 
-const LinkText = styled.span`
-  cursor: pointer;
-  margin: 8px 16px;
-  padding: 1px;
-  font-size: 12px;
-  opacity: 0.54;
-  &:hover {
-    opacity: 1;
+  span {
+    cursor: pointer;
+    margin: 8px 16px;
+    padding: 1px;
+    font-size: 12px;
+    opacity: 0.54;
+    &:hover {
+      opacity: 1;
+    }
   }
 `;
 
@@ -85,7 +85,7 @@ const Footer: React.FC<FooterPropsType> = ({ children }: FooterPropsType) => {
   return (
     <React.StrictMode>
       <Container>
-        <Hit
+        <img
           alt={TITLE}
           title={TITLE}
           src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flitemera.github.io&count_bg=%001E1E1E&title_bg=%001E1E1E&icon=&edge_flat=false"
@@ -99,7 +99,7 @@ const Footer: React.FC<FooterPropsType> = ({ children }: FooterPropsType) => {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <LinkText>{item.title}</LinkText>
+              <span>{item.title}</span>
             </a>
           ))}
         </Tos>
