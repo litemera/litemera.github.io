@@ -42,6 +42,10 @@ const Container = styled.div`
     display: inline-block;
     background-color: ${(props) => props.theme.colors.white};
 
+    &.ios {
+      margin-right: 8px;
+    }
+
     img {
       width: 24px;
       height: 24px;
@@ -77,14 +81,7 @@ const DownloadBtn: React.FC<DownloadBtnPropsType> = ({
     <React.StrictMode>
       <Container>
         {APP_STORE_TYPES.map((type, i: number) => (
-          <div
-            className={type.os}
-            role="button"
-            key={i}
-            style={{
-              marginRight: type.os === "ios" ? "8px" : "0",
-            }}
-          >
+          <div className={type.os} role="button" key={i}>
             <a
               href={type.href}
               target="_blank"

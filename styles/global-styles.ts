@@ -17,6 +17,28 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
     font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
+    h1 {
+      font-size: 48px;
+      font-weight: 900;
+      text-align: center;
+      margin-bottom: -8px;
+      
+      @media ${(props) => props.theme.mqbp.pablet} {
+        font-size: 32px;
+      }
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 300;
+      text-align: center;
+      opacity: 0.54;
+      
+      @media ${(props) => props.theme.mqbp.pablet} {
+        font-size: 16px;
+      }
+    }
+
     button {
       border: 0;
     }
@@ -25,6 +47,30 @@ export const GlobalStyle = createGlobalStyle`
       color: inherit;
       cursor: pointer;
       text-decoration: none;
+    }
+
+    .section {
+      padding: 48px 0 96px;
+    }
+
+    .wrapper {
+      margin: 0 auto;
+      max-width: calc(#{$desktop_size} - 64px);
+
+      @media ${(props) => props.theme.mqbp.desktop} {
+        padding: 0 64px;
+        width: calc($desktop_size - 64px);
+      }
+
+      @media ${(props) => props.theme.mqbp.tablet} {
+        padding: 0 32px;
+        width: calc($tablet_size - 32px);
+      }
+
+      @media ${(props) => props.theme.mqbp.pablet} {
+        padding: 0 16px;
+        width: calc($pablet_size - 16px);
+      }
     }
   }
 
@@ -36,9 +82,5 @@ export const GlobalStyle = createGlobalStyle`
   ::selection {
     color: ${theme.colors.background};
     background: ${theme.colors.white};
-  }
-
-  .section {
-    padding: 48px 0 96px;
   }
 `;

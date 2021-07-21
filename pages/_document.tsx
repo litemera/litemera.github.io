@@ -65,6 +65,12 @@ class Litemera extends Document {
             content={FACEBOOK_DOMAIN_ID}
           />
 
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css"
+          />
+
           <meta name="robots" content="index,follow" />
           <meta name="googlebot" content="index,follow" />
 
