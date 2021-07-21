@@ -26,7 +26,7 @@ const GoogleAnalytics: React.FC<GoogleAnalyticsPropsType> = ({
           `,
         }}
       />
-      {children}
+      {children ? children : null}
     </React.StrictMode>
   );
 };

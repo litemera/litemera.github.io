@@ -51,7 +51,7 @@ const Mock: React.FC<MockPropsType> = ({ children }: MockPropsType) => {
           <div className="img">
             <img src="/images/mock.png" alt={TITLE} title={TITLE} />
           </div>
-          {children}
+          {children ? children : null}
         </div>
       </div>
     </React.StrictMode>

@@ -33,7 +33,7 @@ const Firebase: React.FC<FirebasePropsType> = ({
         `,
       }}
     />
-    {children}
+    {children ? children : null}
   </React.StrictMode>
 );
 

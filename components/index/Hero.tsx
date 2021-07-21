@@ -58,7 +58,7 @@ const Hero: React.FC<HeroPropsType> = ({ children }: HeroPropsType) => {
             deleted automatically after 24 hours
           </h2>
           <DownloadBtn />
-          {children}
+          {children ? children : null}
         </div>
       </div>
     </React.StrictMode>

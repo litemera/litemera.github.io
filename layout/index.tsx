@@ -9,7 +9,7 @@ interface LayoutPropsType {
 const Layout: React.FC<LayoutPropsType> = ({ children }: LayoutPropsType) => {
   return (
     <React.StrictMode>
-      {children}
+      {children ? children : null}
       <Footer />
     </React.StrictMode>
   );

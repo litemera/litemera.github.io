@@ -125,7 +125,7 @@ const Footer: React.FC<FooterPropsType> = ({ children }: FooterPropsType) => {
             </a>
           ))}
         </div>
-        {children}
+        {children ? children : null}
       </div>
     </React.StrictMode>
   );

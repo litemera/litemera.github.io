@@ -118,7 +118,7 @@ const DownloadBtn: React.FC<DownloadBtnPropsType> = ({
             </div>
           ))}
         </div>
-        {children}
+        {children ? children : null}
       </div>
     </React.StrictMode>
   );

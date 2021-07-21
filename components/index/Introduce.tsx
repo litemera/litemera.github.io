@@ -76,7 +76,7 @@ const Introduce: React.FC<IntroducePropsType> = ({
               </div>
             ))}
           </div>
-          {children}
+          {children ? children : null}
         </div>
       </div>
     </React.StrictMode>

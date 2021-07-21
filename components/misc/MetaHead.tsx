@@ -64,7 +64,7 @@ const MetaHead: React.FC<MetaHeadPropsType> = ({
       <meta property="al:android:package" content={ANDROID_PACKAGE} />
       <meta property="al:web:url" content={canonical} />
 
-      {children}
+      {children ? children : null}
 
       <link rel="canonical" href={canonical} />
       <link rel="alternate" href={DEEPLINK} />
