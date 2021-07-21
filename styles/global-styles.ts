@@ -55,21 +55,21 @@ export const GlobalStyle = createGlobalStyle`
 
     .wrapper {
       margin: 0 auto;
-      max-width: calc(#{$desktop_size} - 64px);
+      max-width: calc(${theme.breakPoints.desktop_size} - 64px);
 
       @media ${(props) => props.theme.mqbp.desktop} {
         padding: 0 64px;
-        width: calc($desktop_size - 64px);
+        width: calc(${theme.breakPoints.desktop_size} - 64px);
       }
 
       @media ${(props) => props.theme.mqbp.tablet} {
         padding: 0 32px;
-        width: calc($tablet_size - 32px);
+        width: calc(${theme.breakPoints.tablet_size} - 32px);
       }
 
       @media ${(props) => props.theme.mqbp.pablet} {
         padding: 0 16px;
-        width: calc($pablet_size - 16px);
+        width: calc(${theme.breakPoints.pablet_size} - 16px);
       }
     }
   }
