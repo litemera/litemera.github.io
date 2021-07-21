@@ -1,6 +1,6 @@
 import React from "react";
 
-import { css } from "styled-jsx/css";
+import styled from "styled-components";
 
 import { TITLE } from "@utils/constants";
 import { useMediaQuery } from "@utils/hooks/useMediaQuery";
@@ -16,30 +16,28 @@ const iconLists = [
   },
 ];
 
-const style = css`
-  .introduce {
-    background-color: #262626;
-  }
+const IntroduceContainer = styled.div`
+  background-color: ${(props) => props.theme.colors.lightgrey};
+`;
 
-  h1 {
-    margin-bottom: -8px;
-  }
+const HeadingTitle = styled.h1`
+  margin-bottom: -8px;
+`;
 
-  .grid {
-    margin-top: 64px;
-    display: grid;
-    grid-gap: 16px;
-    grid-template-columns: repeat(${iconLists.length}, 1fr);
-  }
+const GridBox = styled.div`
+  margin-top: 64px;
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(${iconLists.length}, 1fr);
+`;
 
-  .item {
-    text-align: center;
-  }
+const GridItem = styled.div`
+  text-align: center;
+`;
 
-  img {
-    width: 48px;
-    height: 48px;
-  }
+const Image = styled.img`
+  width: 48px;
+  height: 48px;
 `;
 
 interface IntroducePropsType {
@@ -53,19 +51,20 @@ const Introduce: React.FC<IntroducePropsType> = ({
 
   return (
     <React.StrictMode>
-      <style jsx>{style}</style>
-      <div className="introduce section">
+      <IntroduceContainer className="introduce section">
         <div className="wrapper">
-          <h1 className="section--title">What is {TITLE}?</h1>
+          <HeadingTitle className="section--title">
+            What is {TITLE}?
+          </HeadingTitle>
           <h2>
             Every photos taken with {TITLE} will be deleted automatically after
             24 hours. {isMobile ? null : <br />}We do not upload the photos to
             server or cloud services.
           </h2>
-          <div className="grid">
+          <GridBox>
             {iconLists.map((item, i: number) => (
-              <div className="item" key={i}>
-                <img
+              <GridItem key={i}>
+                <Image
                   width="48px"
                   height="48px"
                   src={`/images/icons/${item.src}.svg`}
@@ -73,12 +72,12 @@ const Introduce: React.FC<IntroducePropsType> = ({
                   title={item.title}
                 />
                 <h3>{item.title}</h3>
-              </div>
+              </GridItem>
             ))}
-          </div>
+          </GridBox>
           {children ? children : null}
         </div>
-      </div>
+      </IntroduceContainer>
     </React.StrictMode>
   );
 };
