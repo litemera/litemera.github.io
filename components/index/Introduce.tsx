@@ -16,12 +16,8 @@ const iconLists = [
   },
 ];
 
-const IntroduceContainer = styled.div`
+const Container = styled.div`
   background-color: ${(props) => props.theme.colors.lightgrey};
-`;
-
-const HeadingTitle = styled.h1`
-  margin-bottom: -8px;
 `;
 
 const GridBox = styled.div`
@@ -51,11 +47,9 @@ const Introduce: React.FC<IntroducePropsType> = ({
 
   return (
     <React.StrictMode>
-      <IntroduceContainer className="introduce section">
+      <Container className="introduce section">
         <div className="wrapper">
-          <HeadingTitle className="section--title">
-            What is {TITLE}?
-          </HeadingTitle>
+          <h1 className="section--title">What is {TITLE}?</h1>
           <h2>
             Every photos taken with {TITLE} will be deleted automatically after
             24 hours. {isMobile ? null : <br />}We do not upload the photos to
@@ -77,7 +71,7 @@ const Introduce: React.FC<IntroducePropsType> = ({
           </GridBox>
           {children ? children : null}
         </div>
-      </IntroduceContainer>
+      </Container>
     </React.StrictMode>
   );
 };

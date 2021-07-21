@@ -6,7 +6,7 @@ import DownloadBtn from "@components/misc/DownloadBtn";
 import { TITLE } from "@utils/constants";
 import { useMediaQuery } from "@utils/hooks/useMediaQuery";
 
-const HeroContainer = styled.div`
+const Container = styled.div`
   margin: 96px auto 32px;
   text-align: center;
   @media ${(props) => props.theme.mqbp.pablet} {
@@ -17,12 +17,8 @@ const HeroContainer = styled.div`
   }
 `;
 
-const InlineDiv = styled.div`
+const Div = styled.div`
   display: inline-block;
-`;
-
-const HeadingTitle = styled.h1`
-  margin-bottom: -8px;
 `;
 
 interface HeroPropsType {
@@ -34,8 +30,8 @@ const Hero: React.FC<HeroPropsType> = ({ children }: HeroPropsType) => {
 
   return (
     <React.StrictMode>
-      <HeroContainer className="hero section">
-        <InlineDiv className="wrapper">
+      <Container className="section">
+        <Div className="wrapper">
           <img
             width="96px"
             height="96px"
@@ -43,15 +39,15 @@ const Hero: React.FC<HeroPropsType> = ({ children }: HeroPropsType) => {
             title={TITLE}
             src="/images/launcher.svg"
           />
-          <HeadingTitle>{TITLE}</HeadingTitle>
+          <h1>{TITLE}</h1>
           <h2>
             Take a photo with Litemera, it will be {isMobile ? null : <br />}
             deleted automatically after 24 hours
           </h2>
           <DownloadBtn />
           {children ? children : null}
-        </InlineDiv>
-      </HeroContainer>
+        </Div>
+      </Container>
     </React.StrictMode>
   );
 };
