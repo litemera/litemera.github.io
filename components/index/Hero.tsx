@@ -1,36 +1,28 @@
 import React from "react";
 
-import { css } from "styled-jsx/css";
+import styled from "styled-components";
 
 import DownloadBtn from "@components/misc/DownloadBtn";
 import { TITLE } from "@utils/constants";
 import { useMediaQuery } from "@utils/hooks/useMediaQuery";
 
-const style = css`
-  .hero {
-    margin: 96px auto 32px;
-    text-align: center;
+const HeroContainer = styled.div`
+  margin: 96px auto 32px;
+  text-align: center;
+  @media ${(props) => props.theme.mqbp.pablet} {
+    margin: 64px auto 0;
   }
+  @media ${(props) => props.theme.mqbp.small} {
+    margin: 48px auto 0;
+  }
+`;
 
-  .hero > div {
-    display: inline-block;
-  }
+const InlineDiv = styled.div`
+  display: inline-block;
+`;
 
-  h1 {
-    margin-bottom: -8px;
-  }
-
-  @media screen and (max-width: 420px) {
-    .hero {
-      margin: 64px auto 0;
-    }
-  }
-
-  @media screen and (max-width: 320px) {
-    .hero {
-      margin: 48px auto 0;
-    }
-  }
+const HeadingTitle = styled.h1`
+  margin-bottom: -8px;
 `;
 
 interface HeroPropsType {
@@ -42,9 +34,8 @@ const Hero: React.FC<HeroPropsType> = ({ children }: HeroPropsType) => {
 
   return (
     <React.StrictMode>
-      <style jsx>{style}</style>
-      <div className="hero section">
-        <div className="wrapper">
+      <HeroContainer className="hero section">
+        <InlineDiv className="wrapper">
           <img
             width="96px"
             height="96px"
@@ -52,15 +43,15 @@ const Hero: React.FC<HeroPropsType> = ({ children }: HeroPropsType) => {
             title={TITLE}
             src="/images/launcher.svg"
           />
-          <h1>{TITLE}</h1>
+          <HeadingTitle>{TITLE}</HeadingTitle>
           <h2>
             Take a photo with Litemera, it will be {isMobile ? null : <br />}
             deleted automatically after 24 hours
           </h2>
           <DownloadBtn />
           {children ? children : null}
-        </div>
-      </div>
+        </InlineDiv>
+      </HeroContainer>
     </React.StrictMode>
   );
 };

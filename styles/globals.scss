@@ -1,43 +1,12 @@
 @charset "UTF-8";
 
-@import "./normalize.scss";
-
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css");
 
 @import "./modules/functions.scss";
 @import "./modules/mqbp.scss";
 @import "./modules/variables.scss";
 
-html {
-  background-color: $background;
-}
-
 body {
-  color: #fff;
-  padding: 0;
-  margin: 0;
-  line-height: 1.5;
-  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-
-  ::-moz-selection {
-    color: $background;
-    background: #fff;
-  }
-
-  ::selection {
-    color: $background;
-    background: #fff;
-  }
-
-  button {
-    border: 0;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-
   h1 {
     font-size: units(12);
     font-weight: 900;
@@ -57,10 +26,6 @@ body {
     @media #{$pablet} {
       font-size: units(4);
     }
-  }
-
-  .section {
-    padding: 48px 0 96px;
   }
 
   .wrapper {
