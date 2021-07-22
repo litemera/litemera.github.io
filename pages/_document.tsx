@@ -5,7 +5,7 @@ import { ServerStyleSheet } from "styled-components";
 
 import Firebase from "@analytics/Firebase";
 import GoogleAnalytics from "@analytics/GoogleAnalytics";
-import Pixel from "@analytics/Pixel";
+// import Pixel from "@analytics/Pixel";
 import {
   TITLE,
   FACEBOOK_APP_ID,
@@ -14,7 +14,7 @@ import {
   TWITTER_USERNAME,
   GA_TRACKING_ID,
   FIREBASE_MEASUREMENT_ID,
-  FACEBOOK_PIXEL_ID,
+  // FACEBOOK_PIXEL_ID,
 } from "@utils/constants";
 import { isProduction } from "@utils/env";
 
@@ -141,7 +141,7 @@ class Litemera extends Document {
           <meta name="theme-color" content="#121212" />
           <link rel="shortcut icon" href="/favicon/favicon.ico" />
 
-          {isProduction ? <Pixel id={FACEBOOK_PIXEL_ID} /> : null}
+          {/* {isProduction ? <Pixel id={FACEBOOK_PIXEL_ID} /> : null} */}
         </Head>
         <body>
           <Main />
