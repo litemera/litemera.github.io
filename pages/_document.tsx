@@ -83,16 +83,6 @@ class Litemera extends Document {
 
           <link
             rel="apple-touch-icon"
-            sizes="114x114"
-            href="/favicon/apple-icon-114x114.png"
-          />
-          <link
-            rel="apple-touch-icon"
-            sizes="120x120"
-            href="/favicon/apple-icon-120x120.png"
-          />
-          <link
-            rel="apple-touch-icon"
             sizes="144x144"
             href="/favicon/apple-icon-144x144.png"
           />
