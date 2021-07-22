@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
   html {
     background-color: ${theme.colors.background};
   }
-  
+
   body {
     color: ${theme.colors.white};
     padding: 0;
@@ -19,7 +19,7 @@ export const GlobalStyle = createGlobalStyle`
       font-weight: 900;
       text-align: center;
       margin-bottom: -8px;
-      
+
       @media ${(props) => props.theme.mqbp.pablet} {
         font-size: 32px;
       }
@@ -30,7 +30,7 @@ export const GlobalStyle = createGlobalStyle`
       font-weight: 300;
       text-align: center;
       opacity: 0.54;
-      
+
       @media ${(props) => props.theme.mqbp.pablet} {
         font-size: 16px;
       }
@@ -39,7 +39,7 @@ export const GlobalStyle = createGlobalStyle`
     button {
       border: 0;
     }
-  
+
     a {
       color: inherit;
       text-decoration: none;
