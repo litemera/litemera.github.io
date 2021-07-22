@@ -32,7 +32,7 @@ const Mock: React.FC<MockPropsType> = ({ children }: MockPropsType) => {
     <React.StrictMode>
       <Container className="section">
         <div className="wrapper">
-          <h1>24 Hours</h1>
+          <h1>⏳ 24 Hours</h1>
           <h2>
             Erase unimportant photos from memory. {isMobile ? null : <br />}
             Litemera will delete them for you.

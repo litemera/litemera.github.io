@@ -7,11 +7,11 @@ import { useMediaQuery } from "@utils/hooks/useMediaQuery";
 
 const iconLists = [
   {
-    src: "auto_delete",
+    emoji: "🗑️",
     title: "Automatically delete after 24 hours",
   },
   {
-    src: "cloud_off",
+    emoji: "☁️",
     title: "No server, No cloud",
   },
 ];
@@ -20,17 +20,18 @@ const Container = styled.div`
   background-color: ${(props) => props.theme.colors.lightgrey};
 
   .grid {
-    margin-top: 64px;
     display: grid;
     grid-gap: 16px;
+    max-width: 800px;
+    margin: 64px auto 0;
     grid-template-columns: repeat(${iconLists.length}, 1fr);
 
     div {
       text-align: center;
 
-      img {
-        width: 48px;
-        height: 48px;
+      p {
+        line-height: 0;
+        font-size: 64px;
       }
     }
   }
@@ -58,13 +59,7 @@ const Introduce: React.FC<IntroducePropsType> = ({
           <div className="grid">
             {iconLists.map((item, i: number) => (
               <div key={i}>
-                <img
-                  width="48px"
-                  height="48px"
-                  src={`/images/icons/${item.src}.svg`}
-                  alt={item.title}
-                  title={item.title}
-                />
+                <p>{item.emoji}</p>
                 <h3>{item.title}</h3>
               </div>
             ))}

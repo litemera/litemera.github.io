@@ -35,7 +35,7 @@ const Hero: React.FC<HeroPropsType> = ({ children }: HeroPropsType) => {
             title={TITLE}
             src="/images/launcher.svg"
           />
-          <h1>{TITLE}</h1>
+          <h1>📸 {TITLE}</h1>
           <h2>
             Take a photo with Litemera, it will be {isMobile ? null : <br />}
             deleted automatically after 24 hours
