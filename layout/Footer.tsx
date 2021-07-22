@@ -48,32 +48,34 @@ const Container = styled.div`
     margin: 0 auto 16px;
     display: inline-block;
   }
-`;
 
-const Tos = styled.div`
-  margin-bottom: 8px;
+  .tos {
+    margin-bottom: 8px;
 
-  span {
-    cursor: pointer;
-    margin: 8px 16px;
-    padding: 1px;
-    font-size: 12px;
-    opacity: 0.54;
-    &:hover {
-      opacity: 1;
+    span {
+      cursor: pointer;
+      margin: 8px 16px;
+      padding: 1px;
+      font-size: 12px;
+      opacity: 0.54;
+      &:hover {
+        opacity: 1;
+      }
     }
   }
-`;
 
-const SnsImage = styled.img`
-  width: 24px;
-  height: 24px;
-  margin: 8px 16px;
-  padding: 1px;
-  cursor: pointer;
-  opacity: 0.54;
-  &:hover {
-    opacity: 1;
+  .sns {
+    img {
+      width: 24px;
+      height: 24px;
+      margin: 8px 16px;
+      padding: 1px;
+      cursor: pointer;
+      opacity: 0.54;
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 `;
 
@@ -90,7 +92,7 @@ const Footer: React.FC<FooterPropsType> = ({ children }: FooterPropsType) => {
           title={TITLE}
           src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flitemera.github.io&count_bg=%001E1E1E&title_bg=%001E1E1E&icon=&edge_flat=false"
         />
-        <Tos>
+        <div className="tos">
           {TOS_ITEMS.map((item, i: number) => (
             <a
               key={i}
@@ -102,8 +104,8 @@ const Footer: React.FC<FooterPropsType> = ({ children }: FooterPropsType) => {
               <span>{item.title}</span>
             </a>
           ))}
-        </Tos>
-        <div>
+        </div>
+        <div className="sns">
           {SNS_ITEMS.map((item, i: number) => (
             <a
               key={i}
@@ -112,7 +114,7 @@ const Footer: React.FC<FooterPropsType> = ({ children }: FooterPropsType) => {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <SnsImage
+              <img
                 width="24px"
                 height="24px"
                 src={`images/ic-${item.src}-white.svg`}

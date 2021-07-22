@@ -8,16 +8,16 @@ import { useMediaQuery } from "@utils/hooks/useMediaQuery";
 const Container = styled.div`
   margin: 32px auto 0;
   overflow: hidden;
-`;
 
-const ImageBox = styled.div`
-  margin-top: 64px;
-  position: relative;
-  text-align: center;
+  .img {
+    margin-top: 64px;
+    position: relative;
+    text-align: center;
 
-  & > img {
-    width: 80vw;
-    max-width: 400px;
+    & > img {
+      width: 80vw;
+      max-width: 400px;
+    }
   }
 `;
 
@@ -37,9 +37,9 @@ const Mock: React.FC<MockPropsType> = ({ children }: MockPropsType) => {
             Erase unimportant photos from memory. {isMobile ? null : <br />}
             Litemera will delete them for you.
           </h2>
-          <ImageBox>
+          <div className="img">
             <img src="/images/mock.png" alt={TITLE} title={TITLE} />
-          </ImageBox>
+          </div>
           {children ? children : null}
         </div>
       </Container>

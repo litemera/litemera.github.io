@@ -18,20 +18,20 @@ const iconLists = [
 
 const Container = styled.div`
   background-color: ${(props) => props.theme.colors.lightgrey};
-`;
 
-const GridBox = styled.div`
-  margin-top: 64px;
-  display: grid;
-  grid-gap: 16px;
-  grid-template-columns: repeat(${iconLists.length}, 1fr);
+  .grid {
+    margin-top: 64px;
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: repeat(${iconLists.length}, 1fr);
 
-  div {
-    text-align: center;
+    div {
+      text-align: center;
 
-    img {
-      width: 48px;
-      height: 48px;
+      img {
+        width: 48px;
+        height: 48px;
+      }
     }
   }
 `;
@@ -55,7 +55,7 @@ const Introduce: React.FC<IntroducePropsType> = ({
             24 hours. {isMobile ? null : <br />}We do not upload the photos to
             server or cloud services.
           </h2>
-          <GridBox>
+          <div className="grid">
             {iconLists.map((item, i: number) => (
               <div key={i}>
                 <img
@@ -68,7 +68,7 @@ const Introduce: React.FC<IntroducePropsType> = ({
                 <h3>{item.title}</h3>
               </div>
             ))}
-          </GridBox>
+          </div>
           {children ? children : null}
         </div>
       </Container>
