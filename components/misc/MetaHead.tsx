@@ -23,7 +23,7 @@ interface MetaHeadPropsType {
 
 const MetaHead: React.FC<MetaHeadPropsType> = ({
   title = PAGE_TITLE,
-  description = DESCRIPTION,
+  description = `📸 ${DESCRIPTION}`,
   keywords = META_KEYWORDS,
   canonical = DOMAIN,
   children,
