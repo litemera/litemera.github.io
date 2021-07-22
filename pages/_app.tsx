@@ -1,3 +1,5 @@
+import "@styles/_normalize.scss";
+
 import React from "react";
 
 import type { AppProps } from "next/app";

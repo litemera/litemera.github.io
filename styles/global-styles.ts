@@ -1,10 +1,10 @@
 import { createGlobalStyle } from "styled-components";
-import { normalize } from "styled-normalize";
+// import { normalize } from "styled-normalize";
 
 import { theme } from "@styles/theme";
 
+/* ${normalize} */
 export const GlobalStyle = createGlobalStyle`
-  ${normalize}
 
   html {
     background-color: ${theme.colors.background};
