@@ -1,4 +1,4 @@
-import "@styles/normalize.scss";
+import "@styles/normalize.css";
 
 import React from "react";
 

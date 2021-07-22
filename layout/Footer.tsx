@@ -88,6 +88,8 @@ const Footer: React.FC<FooterPropsType> = ({ children }: FooterPropsType) => {
     <React.StrictMode>
       <Container>
         <img
+          width="96px"
+          height="20px"
           alt={TITLE}
           title={TITLE}
           src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Flitemera.github.io&count_bg=%001E1E1E&title_bg=%001E1E1E&icon=&edge_flat=false"
