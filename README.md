@@ -1,6 +1,6 @@
 [![Litemera](https://litemera.github.io/images/meta.jpg)](https://litemera.github.io/)
 
-# Litemera 📸
+# 📸 Litemera
 
 ### Take a photo with Litemera, it will be deleted automatically after 24 hours.
 
