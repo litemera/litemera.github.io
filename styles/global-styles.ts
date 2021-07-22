@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     line-height: 1.5;
-    font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: "Pretendard", sans-serif;
 
     h1 {
       font-size: 48px;
@@ -42,7 +42,6 @@ export const GlobalStyle = createGlobalStyle`
   
     a {
       color: inherit;
-      cursor: pointer;
       text-decoration: none;
     }
 
