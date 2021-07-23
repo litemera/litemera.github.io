@@ -58,6 +58,7 @@ const Container = styled.div`
       padding: 1px;
       font-size: 12px;
       opacity: 0.54;
+
       &:hover {
         opacity: 1;
       }
@@ -72,6 +73,7 @@ const Container = styled.div`
       padding: 1px;
       cursor: pointer;
       opacity: 0.54;
+
       &:hover {
         opacity: 1;
       }

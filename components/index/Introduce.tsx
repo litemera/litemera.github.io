@@ -7,11 +7,11 @@ import { useMediaQuery } from "@utils/hooks/useMediaQuery";
 
 const iconLists = [
   {
-    emoji: "🗑️",
+    src: "trash",
     title: "Automatically delete after 24 hours",
   },
   {
-    emoji: "☁️",
+    src: "cloud",
     title: "No server, No cloud",
   },
 ];
@@ -29,9 +29,15 @@ const Container = styled.div`
     div {
       text-align: center;
 
-      p {
-        line-height: 0;
-        font-size: 64px;
+      img {
+        width: 96px;
+        height: 96px;
+        margin-bottom: -8px;
+
+        @media ${(props) => props.theme.mqbp.pablet} {
+          width: 64px;
+          height: 64px;
+        }
       }
     }
   }
@@ -59,7 +65,13 @@ const Introduce: React.FC<IntroducePropsType> = ({
           <div className="grid">
             {iconLists.map((item, i: number) => (
               <div key={i}>
-                <p>{item.emoji}</p>
+                <img
+                  alt={item.title}
+                  title={item.title}
+                  src={`/images/${item.src}.png`}
+                  width="96px"
+                  height="96px"
+                />
                 <h3>{item.title}</h3>
               </div>
             ))}
