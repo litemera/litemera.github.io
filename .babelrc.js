@@ -8,8 +8,10 @@ module.exports = {
       "styled-components",
       {
         ssr: true,
-        displayName: true,
+        fileName: false,
+        displayName: false,
         preprocess: false,
+        pure: true,
       },
     ],
   ],
