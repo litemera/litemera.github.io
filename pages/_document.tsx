@@ -20,13 +20,13 @@ import { isProduction } from "@utils/env";
 
 class Litemera extends Document {
   static async getInitialProps(ctx: any) {
-    const sheet = new ServerStyleSheet();
+    const styleSheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
     try {
       ctx.renderPage = () =>
         originalRenderPage({
           enhanceApp: (App) => (props) =>
-            sheet.collectStyles(<App {...props} />),
+            styleSheet.collectStyles(<App {...props} />),
         });
 
       const initialProps = await Document.getInitialProps(ctx);
@@ -36,12 +36,12 @@ class Litemera extends Document {
         styles: (
           <>
             {initialProps.styles}
-            {sheet.getStyleElement()}
+            {styleSheet.getStyleElement()}
           </>
         ),
       };
     } finally {
-      sheet.seal();
+      styleSheet.seal();
     }
   }
 

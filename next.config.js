@@ -49,6 +49,10 @@ const nextConfig = {
     // Important: return the modified config
     return config;
   },
+
+  images: {
+    loader: "imgix",
+  },
 };
 
 module.exports = withPlugins([nextConfig, withImages]);

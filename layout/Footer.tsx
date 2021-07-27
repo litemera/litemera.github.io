@@ -121,7 +121,7 @@ const Footer: React.FC<FooterPropsType> = ({ children }: FooterPropsType) => {
               <img
                 width="24px"
                 height="24px"
-                src={`images/ic-${item.src}-white.svg`}
+                src={`images/icons/ic-${item.src}-white.svg`}
                 alt={`${TITLE} ${capitalizeFirstLetter(item.src)}`}
                 title={`${TITLE} ${capitalizeFirstLetter(item.src)}`}
               />

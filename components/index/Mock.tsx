@@ -1,5 +1,6 @@
 import React from "react";
 
+import Image from "next/image";
 import styled from "styled-components";
 
 import { TITLE } from "@utils/constants";
@@ -14,9 +15,9 @@ const Container = styled.div`
     position: relative;
     text-align: center;
 
-    & > img {
+    img {
       width: 80vw;
-      max-width: 400px;
+      max-width: 400px !important;
     }
   }
 `;
@@ -38,7 +39,13 @@ const Mock: React.FC<MockPropsType> = ({ children }: MockPropsType) => {
             Litemera will delete them for you.
           </h2>
           <div className="img">
-            <img src="/images/mock.png" alt={TITLE} title={TITLE} />
+            <Image
+              width={400}
+              height={823}
+              src="/images/mock.png"
+              alt={TITLE}
+              title={TITLE}
+            />
           </div>
           {children ? children : null}
         </div>
