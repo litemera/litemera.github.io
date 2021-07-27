@@ -11,6 +11,7 @@ module.exports = {
         fileName: false,
         displayName: false,
         preprocess: false,
+        minify: true,
         pure: true,
       },
     ],
