@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
   } */
 
   html {
+    line-height: 1.5;
     background-color: ${theme.colors.background};
   }
 
@@ -21,7 +22,6 @@ export const GlobalStyle = createGlobalStyle`
     color: ${theme.colors.white};
     padding: 0;
     margin: 0;
-    line-height: 1.5;
     font-family: "Pretendard", sans-serif;
 
     h1 {
