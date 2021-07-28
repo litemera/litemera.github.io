@@ -1,3 +1,5 @@
+"use strict";
+
 import React, { useEffect } from "react";
 
 import { NextPage } from "next";

@@ -1,3 +1,5 @@
+"use strict";
+
 import { breakPoints } from "@styles/modules/breakPoints";
 
 export const mqbp = {

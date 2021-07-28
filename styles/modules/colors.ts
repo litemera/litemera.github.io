@@ -1,3 +1,5 @@
+"use strict";
+
 export const colors = {
   primary: `#784cee`,
   background: `#121212`,

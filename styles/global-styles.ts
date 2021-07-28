@@ -1,8 +1,18 @@
+"use strict";
+
 import { createGlobalStyle } from "styled-components";
 
 import { theme } from "@styles/theme";
 
 export const GlobalStyle = createGlobalStyle`
+  /* img:not([alt]) {
+    border: 1px solid red;
+  }
+
+  a:not([title]) {
+    border: 1px solid red;
+  } */
+
   html {
     background-color: ${theme.colors.background};
   }

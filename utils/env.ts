@@ -1,3 +1,5 @@
+"use strict";
+
 export const DOMAIN = "https://litemera.github.io";
 
 export const isProduction: boolean =

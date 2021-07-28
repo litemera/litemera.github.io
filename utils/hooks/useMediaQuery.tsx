@@ -1,3 +1,5 @@
+"use strict";
+
 import { useState, useEffect } from "react";
 
 export const useMediaQuery = (query: string): boolean => {

@@ -1,3 +1,5 @@
+"use strict";
+
 import { DefaultTheme } from "styled-components";
 
 import { breakPoints } from "@styles/modules/breakPoints";

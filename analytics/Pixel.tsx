@@ -1,3 +1,5 @@
+"use strict";
+
 import React from "react";
 
 import { FACEBOOK_PIXEL_ID } from "@utils/constants";

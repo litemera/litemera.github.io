@@ -1,3 +1,5 @@
+"use strict";
+
 import React from "react";
 
 import { GA_TRACKING_ID } from "@utils/constants";
