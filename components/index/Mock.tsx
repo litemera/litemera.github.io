@@ -5,15 +5,16 @@ import React from "react";
 import Image from "next/image";
 import styled from "styled-components";
 
+import { units } from "@styles/mixin/index";
 import { TITLE } from "@utils/constants";
 import { useMediaQuery } from "@utils/hooks/useMediaQuery";
 
 const Container = styled.div`
-  margin: 32px auto 0;
+  margin: ${units(8)} auto 0;
   overflow: hidden;
 
   .img {
-    margin-top: 64px;
+    margin-top: ${units(16)};
     position: relative;
     text-align: center;
 

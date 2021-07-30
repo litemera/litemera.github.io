@@ -4,6 +4,7 @@ import React from "react";
 
 import styled from "styled-components";
 
+import { units } from "@styles/mixin/index";
 import { TITLE, IOS_URL, AND_URL } from "@utils/constants";
 
 type storeTypes = {
@@ -29,28 +30,28 @@ const APP_STORE_TYPES: storeTypes[] = [
 ];
 
 const Container = styled.div`
-  margin-top: 96px;
+  margin-top: ${units(24)};
   @media ${(props) => props.theme.mqbp.pablet} {
-    margin-top: 64px;
+    margin-top: ${units(16)};
   }
   @media ${(props) => props.theme.mqbp.small} {
-    margin-top: 32px;
+    margin-top: ${units(8)};
   }
 
   div {
     width: auto;
-    height: 56px;
-    border-radius: 16px;
+    height: ${units(14)};
+    border-radius: ${units(4)};
     display: inline-block;
     background-color: ${(props) => props.theme.colors.white};
 
     &.ios {
-      margin-right: 8px;
+      margin-right: ${units(2)};
     }
 
     img {
-      width: 24px;
-      height: 24px;
+      width: ${units(6)};
+      height: ${units(6)};
       padding: 16px 12px 16px 16px;
       display: inline-block;
       @media ${(props) => props.theme.mqbp.android} {
@@ -62,10 +63,10 @@ const Container = styled.div`
     }
 
     span {
-      color: #121212;
+      color: ${(props) => props.theme.colors.background};
       font-weight: 700;
-      line-height: 56px;
-      margin-right: 16px;
+      line-height: ${units(14)};
+      margin-right: ${units(4)};
       vertical-align: top;
       display: inline-block;
     }

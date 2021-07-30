@@ -4,6 +4,7 @@ import React from "react";
 
 import styled from "styled-components";
 
+import { units } from "@styles/mixin/index";
 import { TITLE } from "@utils/constants";
 import { useMediaQuery } from "@utils/hooks/useMediaQuery";
 
@@ -23,22 +24,22 @@ const Container = styled.div`
 
   .grid {
     display: grid;
-    grid-gap: 16px;
+    grid-gap: ${units(4)};
     max-width: 800px;
-    margin: 64px auto 0;
+    margin: ${units(16)} auto 0;
     grid-template-columns: repeat(${iconLists.length}, 1fr);
 
     div {
       text-align: center;
 
       img {
-        width: 96px;
-        height: 96px;
-        margin-bottom: -8px;
+        width: ${units(24)};
+        height: ${units(24)};
+        margin-bottom: ${units(-2)};
 
         @media ${(props) => props.theme.mqbp.pablet} {
-          width: 64px;
-          height: 64px;
+          width: ${units(16)};
+          height: ${units(16)};
         }
       }
     }

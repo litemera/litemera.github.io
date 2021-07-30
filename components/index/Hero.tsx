@@ -5,17 +5,18 @@ import React from "react";
 import styled from "styled-components";
 
 import DownloadBtn from "@components/misc/DownloadBtn";
+import { units } from "@styles/mixin/index";
 import { TITLE } from "@utils/constants";
 import { useMediaQuery } from "@utils/hooks/useMediaQuery";
 
 const Container = styled.div`
-  margin: 96px auto 32px;
+  margin: ${units(24)} auto ${units(8)};
   text-align: center;
   @media ${(props) => props.theme.mqbp.pablet} {
-    margin: 64px auto 0;
+    margin: ${units(16)} auto 0;
   }
   @media ${(props) => props.theme.mqbp.small} {
-    margin: 48px auto 0;
+    margin: ${units(12)} auto 0;
   }
 `;
 

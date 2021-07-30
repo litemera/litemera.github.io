@@ -4,6 +4,7 @@ import React from "react";
 
 import styled from "styled-components";
 
+import { units } from "@styles/mixin/index";
 import {
   TITLE,
   FACEBOOK_USERNAME,
@@ -42,23 +43,23 @@ const Container = styled.div`
   margin: 0 auto;
   width: 100vw;
   text-align: center;
-  padding: 64px 0;
+  padding: ${units(16)} 0;
   background-color: ${(props) => props.theme.colors.lightgrey};
 
   & > img {
     opacity: 0.54;
-    margin: 0 auto 16px;
+    margin: 0 auto ${units(4)};
     display: inline-block;
   }
 
   .tos {
-    margin-bottom: 8px;
+    margin-bottom: ${units(2)};
 
     span {
       cursor: pointer;
-      margin: 8px 16px;
+      margin: ${units(2)} ${units(4)};
       padding: 1px;
-      font-size: 12px;
+      font-size: ${units(3)};
       opacity: 0.54;
 
       &:hover {
@@ -69,9 +70,9 @@ const Container = styled.div`
 
   .sns {
     img {
-      width: 24px;
-      height: 24px;
-      margin: 8px 16px;
+      width: ${units(6)};
+      height: ${units(6)};
+      margin: ${units(2)} ${units(4)};
       padding: 1px;
       cursor: pointer;
       opacity: 0.54;
